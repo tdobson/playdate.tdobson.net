@@ -94,20 +94,20 @@ const PlayDateInvitation: React.FC = () => {
 	return (
 		<>
 			<Head>
-				<title>Baby & Toddler Play-in | Strines</title>
+				<title>Baby & Toddler Play-in Invite| Tim, Jen and James</title>
 				<meta name="description" content="Join us for a relaxed baby and toddler play-in in Strines. Free event for ages 0-2, hosted by Tim, Jen and James. No booking required!" />
 				
 				{/* Open Graph / Facebook */}
 				<meta property="og:type" content="website" />
 				<meta property="og:title" content="Baby & Toddler Play-in | Strines" />
 				<meta property="og:description" content="Join us for a relaxed baby and toddler play-in in Strines. Free event for ages 0-2, hosted by Tim, Jen and James." />
-				<meta property="og:image" content="https://playdate.tdobson.net/og-image.jpg" />
+				<meta property="og:image" content="https://playdate.tdobson.net/og-image2.jpg" />
 				
 				{/* Twitter */}
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:title" content="Baby & Toddler Play-in | Strines" />
 				<meta name="twitter:description" content="Join us for a relaxed baby and toddler play-in in Strines. Free event for ages 0-2, hosted by Tim, Jen and James." />
-				<meta name="twitter:image" content="https://playdate.tdobson.net/og-image.jpg" />
+				<meta name="twitter:image" content="https://playdate.tdobson.net/og-image2.jpg" />
 			</Head>
 			<div className="min-h-screen bg-gradient-to-b from-emerald-50 to-teal-50 p-8">
 			<div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
@@ -118,7 +118,7 @@ const PlayDateInvitation: React.FC = () => {
 					<div className="flex justify-center space-x-6 text-teal-50 mb-4">
 						<div className="flex items-center">
 							<Calendar className="w-5 h-5 mr-2" />
-							<span>Saturday 26th Nov</span>
+							<span>Saturday 16th Nov</span>
 						</div>
 						<div className="flex items-center">
 							<Clock className="w-5 h-5 mr-2" />
