@@ -31,31 +31,15 @@
 		"wrangler": "^3.30.1"
 	}
 }
-{
-  "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+import type { NextPage } from 'next'
+
+const Home: NextPage = () => {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold">Welcome to Playdate</h1>
+      <p className="mt-4">Your playdate invitation site is coming soon!</p>
+    </div>
+  )
 }
+
+export default Home
