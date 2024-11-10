@@ -7,7 +7,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"deploy": "next build && wrangler pages deploy .next",
+		"deploy": "next build && next export && wrangler pages deploy out",
 		"lint": "next lint",
 		"typecheck": "tsc --noEmit"
 	},
