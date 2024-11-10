@@ -196,3 +196,5 @@ const PlayDateInvitation: React.FC = () => {
 		</div>
 	);
 };
+
+export default PlayDateInvitation;
