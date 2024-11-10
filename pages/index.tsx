@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, MapPin, Calendar, Clock, Mail, MessageCircle, Baby, Banknote } from 'lucide-react';
 
-export default function PlayDateInvitation() {
-  const [openQuestion, setOpenQuestion] = useState(null);
+interface Question {
+  q: string;
+  a: string;
+}
+
+const PlayDateInvitation: React.FC = () => {
+  const [openQuestion, setOpenQuestion] = useState<number | null>(null);
   
   // Email obfuscation
   const email = ['timandjen', '@', 'tdobson.net'].join('');
   
-  const questions = [
+  const questions: Question[] = [
     {
       q: "Why are you doing this?",
       a: "We found it difficult to arrange playdates with people due to all the challenges of arranging diaries. This avoids the need to do that, and makes it much easier to welcome people who are free, and meetup with people more who we might not see so much"
