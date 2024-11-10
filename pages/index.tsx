@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type React from "react";
 import { useState } from "react";
+import Head from 'next/head';
 
 interface Question {
 	q: string;
@@ -91,7 +92,24 @@ const PlayDateInvitation: React.FC = () => {
 	];
 
 	return (
-		<div className="min-h-screen bg-gradient-to-b from-emerald-50 to-teal-50 p-8">
+		<>
+			<Head>
+				<title>Baby & Toddler Play-in | Strines</title>
+				<meta name="description" content="Join us for a relaxed baby and toddler play-in in Strines. Free event for ages 0-2, hosted by Tim, Jen and James. No booking required!" />
+				
+				{/* Open Graph / Facebook */}
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content="Baby & Toddler Play-in | Strines" />
+				<meta property="og:description" content="Join us for a relaxed baby and toddler play-in in Strines. Free event for ages 0-2, hosted by Tim, Jen and James." />
+				<meta property="og:image" content="https://playdate.tdobson.net/og-image.jpg" />
+				
+				{/* Twitter */}
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:title" content="Baby & Toddler Play-in | Strines" />
+				<meta name="twitter:description" content="Join us for a relaxed baby and toddler play-in in Strines. Free event for ages 0-2, hosted by Tim, Jen and James." />
+				<meta name="twitter:image" content="https://playdate.tdobson.net/og-image.jpg" />
+			</Head>
+			<div className="min-h-screen bg-gradient-to-b from-emerald-50 to-teal-50 p-8">
 			<div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
 				<div className="bg-teal-600 text-white p-8 text-center">
 					<h1 className="text-4xl font-bold mb-4">Baby & Toddler Play-in</h1>
@@ -194,6 +212,7 @@ const PlayDateInvitation: React.FC = () => {
 				</div>
 			</div>
 		</div>
+		</>
 	);
 };
 
