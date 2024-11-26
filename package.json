@@ -1,6 +1,6 @@
 {
 	"name": "playdate.tdobson.net",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Playdate invitation page",
 	"private": true,
 	"scripts": {
@@ -9,7 +9,8 @@
 		"start": "next start",
 		"deploy": "next build && wrangler pages deploy out",
 		"lint": "next lint",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"convert": "convert public/header.socials.png -resize 1200x630 -quality 85 -strip public/og-image2.jpg"
 	},
 	"author": "Tim",
 	"license": "MIT",
