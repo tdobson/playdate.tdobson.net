@@ -8,12 +8,14 @@
 out
 .next
 .idea
+.wrangler
 
 # testing
 /coverage
 
 # production
 /build
+package-lock.json
 
 # misc
 .DS_Store
@@ -27,3 +29,4 @@ yarn-debug.log*
 yarn-error.log*
 .aider*
 .next/*
+.env
