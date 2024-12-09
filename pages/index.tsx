@@ -1,6 +1,6 @@
 import { Container, Title, Text, Stack, Card, Group, Button, Badge, Box } from '@mantine/core';
 import { IconCalendar, IconClock, IconBaby, IconMail, IconBrandFacebook } from '@tabler/icons-react';
-import { FAQ } from '../components/FAQ/FAQ';
+import FAQ from '../components/FAQ/FAQ';
 
 export default function PlayDatePage() {
   const email = ["timandjen", "@", "tdobson.net"].join("");
