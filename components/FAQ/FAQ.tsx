@@ -5,7 +5,7 @@ interface FAQProps {
   questions: Question[];
 }
 
-export default function FAQ({ questions }: FAQProps) {
+export function FAQ({ questions }: FAQProps) {
   return (
     <Accordion>
       {questions.map((item, index) => (
