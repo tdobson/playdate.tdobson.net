@@ -5,8 +5,17 @@ import { Layout } from '../components/Layout/Layout';
 import eventsConfig from '../config/events.json';
 
 export default function HomePage() {
-  const upcomingEvents = eventsConfig.events.filter(event => {
-    const nextDate = new Date(event.dates[0].date);
+  // Convert the dates array into event objects
+  const events = eventsConfig.dates.map(date => ({
+    type: date.type,
+    title: eventsConfig.title,
+    date: date.date,
+    time: date.time
+  }));
+
+  // Filter for upcoming events
+  const upcomingEvents = events.filter(event => {
+    const nextDate = new Date(event.date);
     return nextDate >= new Date();
   });
 
@@ -19,7 +28,7 @@ export default function HomePage() {
           <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
             {upcomingEvents.map((event) => (
               <Card
-                key={event.id}
+                key={`${event.type}-${event.date}`}
                 shadow="sm"
                 p="xl"
                 radius="md"
@@ -32,7 +41,7 @@ export default function HomePage() {
                   <IconCalendar size={32} color={event.type === 'dads' ? 'var(--mantine-color-grape-6)' : 'var(--mantine-color-pink-6)'} />
                   <div>
                     <Title order={3} c={event.type === 'dads' ? 'grape' : 'pink'}>{event.title}</Title>
-                    <Text c="dimmed" size="sm">Next: {event.dates[0].date}</Text>
+                    <Text c="dimmed" size="sm">Next: {event.date} at {event.time}</Text>
                   </div>
                 </Group>
               </Card>
@@ -41,5 +50,5 @@ export default function HomePage() {
         </Stack>
       </Container>
     </Layout>
-	);
+  );
 }
