@@ -10,7 +10,7 @@ export function FAQ({ questions }: FAQProps) {
 	return (
 		<Accordion>
 			{questions.map((item, index) => (
-				<Accordion.Item key={index} value={item.q}>
+				<Accordion.Item key={item.q} value={item.q}>
 					<Accordion.Control>{item.q}</Accordion.Control>
 					<Accordion.Panel>
 						<Text c="dimmed">{item.a}</Text>

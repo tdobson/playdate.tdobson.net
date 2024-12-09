@@ -103,7 +103,7 @@ export default function PlayDatePage() {
             ))}
 
             <Group justify="center" gap="xs">
-              <IconBaby size={20} />
+              <IconBabyBottle size={20} />
               <Text>Ages 0-2</Text>
               <Text>•</Text>
               <Text>Free Event</Text>
