@@ -1,3 +1,4 @@
+import React from 'react';
 import { Accordion, Text } from '@mantine/core';
 import type { Question } from '../../types/questions';
 

@@ -1,5 +1,6 @@
+import React from 'react';
 import { Container, Title, Text, Stack, Card, Group, Button, Badge, Box } from '@mantine/core';
-import { IconCalendar, IconClock, IconBaby, IconMail, IconBrandFacebook } from '@tabler/icons-react';
+import { IconCalendar, IconClock, IconBabyBottle, IconMail, IconBrandFacebook } from '@tabler/icons-react';
 import { FAQ } from '../components/FAQ/FAQ';
 
 export default function PlayDatePage() {
@@ -79,15 +80,15 @@ export default function PlayDatePage() {
 
   return (
     <Container size="md" py="xl">
-      <Stack spacing="xl">
+      <Stack gap="xl">
         <Card shadow="sm" p="xl" radius="md" withBorder>
-          <Stack spacing="md">
+          <Stack gap="md">
             <Title order={1} ta="center">Baby & Toddler Play-in</Title>
             <Text size="lg" ta="center">Hosted by Tim, Jen and James</Text>
             
             {playDates.map((date, index) => (
               <Card key={index} withBorder p="md">
-                <Group position="apart">
+                <Group justify="space-between">
                   <Group>
                     <IconCalendar size={20} />
                     <Text>{date.date}</Text>
@@ -101,7 +102,7 @@ export default function PlayDatePage() {
               </Card>
             ))}
 
-            <Group position="center" spacing="xs">
+            <Group justify="center" gap="xs">
               <IconBaby size={20} />
               <Text>Ages 0-2</Text>
               <Text>•</Text>
@@ -129,11 +130,11 @@ export default function PlayDatePage() {
           <Title order={2} mb="md">Q&A</Title>
           <FAQ questions={questions} />
 
-          <Group position="center" mt="xl">
+          <Group justify="center" mt="xl">
             <Button 
               component="a"
               href={`mailto:${email}`}
-              leftIcon={<IconMail size={20} />}
+              leftSection={<IconMail size={20} />}
               variant="light">
               Email Us
             </Button>
@@ -142,7 +143,7 @@ export default function PlayDatePage() {
               href="https://m.me/tdobson"
               target="_blank"
               rel="noopener noreferrer"
-              leftIcon={<IconBrandFacebook size={20} />}
+              leftSection={<IconBrandFacebook size={20} />}
               variant="light">
               Message on Facebook
             </Button>
