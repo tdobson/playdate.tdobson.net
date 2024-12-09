@@ -1,0 +1,31 @@
+{
+  "title": "Baby & Toddler Play-in",
+  "hosts": ["Tim", "Jen", "James"],
+  "location": {
+    "address": "272 Strines Road",
+    "postcode": "SK6 7GB",
+    "parking": "Park on road by Strines Church - 30 second walk away",
+    "mapsUrl": "https://maps.apple.com/?address=272 Strines Road, Sk6 7GB"
+  },
+  "contact": {
+    "email": ["timandjen", "@", "tdobson.net"],
+    "facebook": "https://m.me/tdobson"
+  },
+  "details": {
+    "ageRange": "0-2",
+    "cost": "Free Event",
+    "description": "We're hosting a baby and toddler play-in at our house, and you're invited!"
+  },
+  "dates": [
+    {
+      "date": "14th December",
+      "time": "2-5pm",
+      "type": "dads"
+    },
+    {
+      "date": "21st December",
+      "time": "2-5pm",
+      "type": "dads"
+    }
+  ]
+}

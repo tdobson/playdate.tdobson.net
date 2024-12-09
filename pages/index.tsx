@@ -18,81 +18,12 @@ import {
 } from "@tabler/icons-react";
 import React from "react";
 import { FAQ } from "../components/FAQ/FAQ";
+import eventConfig from "../config/events.json";
+import faqConfig from "../config/faq.json";
 
 export default function PlayDatePage() {
-	const email = ["timandjen", "@", "tdobson.net"].join("");
+	const email = eventConfig.contact.email.join("");
 
-	const playDates = [
-		{ date: "14th December", time: "2-5pm", type: "dads" },
-		{ date: "21st December", time: "2-5pm", type: "dads" },
-	];
-
-	const questions = [
-		{
-			q: "Why are you doing this?",
-			a: "We found it difficult to arrange playdates with people due to all the challenges of arranging diaries. This avoids the need to do that, and makes it much easier to welcome people who are free, and meetup with people more who we might not see so much",
-		},
-		{
-			q: "Do I need to RSVP?",
-			a: "Nope - just turn up. If you make it yay, if life gets in the way, such is life!",
-		},
-		{
-			q: "What's the age range?",
-			a: "0 -> 2ish is probably the best age, but older might be fine - drop us a message",
-		},
-		{
-			q: "Where can we park?",
-			a: "Park on road by Strines Church - 30 second walk away",
-		},
-		{
-			q: "What will we do?",
-			a: "We have some toys, and the kids can play around whilst the adults chat",
-		},
-		{
-			q: "What about outdoor play?",
-			a: "If the weather's nice, we have a slide and baby swing! The ground is quite boggy though, so full outdoor suits and outdoor shoes or wellies are recommended. We also have an indoor trampoline and plenty of room indoors.",
-		},
-		{
-			q: "How many people are coming?",
-			a: "As many as come. If it's many, great, if it's a few - also great.",
-		},
-		{
-			q: "Can I bring my partner?",
-			a: "Sure.",
-		},
-		{
-			q: "I don't know you very well, can I come?",
-			a: "Yep - please do. If you're reading this, and your child is in the age range - please do",
-		},
-		{
-			q: "Shall I bring food?",
-			a: "We'll do some snacky finger food like toast for the youth, but if there's snacks you think you or other adults would enjoy, please feel free to bring it along. Please only bring things you'd be willing to take home.",
-		},
-		{
-			q: "What if I'm late?",
-			a: "That's chill. Arrive when you arrive.",
-		},
-		{
-			q: "Can I invite my friend with their kids?",
-			a: "Probably, but drop us a line first",
-		},
-		{
-			q: "Can we bring this specific toy or toys?",
-			a: "err, sure? We have plenty, and anything you bring has a risk of getting lost - but if you think it'd be awesome, or work well for your child - please do!",
-		},
-		{
-			q: "I can't make this one, will you do it again?",
-			a: "Hopefully!",
-		},
-		{
-			q: "Does it cost anything?",
-			a: "Don't be silly! Absolutely not.",
-		},
-		{
-			q: "Can I come if I've never met you before?",
-			a: "Probably not this time - generally this one is aimed as people at people we know.",
-		},
-	];
 
 	return (
 		<Container size="md" py="xl">
@@ -100,13 +31,13 @@ export default function PlayDatePage() {
 				<Card shadow="sm" p="xl" radius="md" withBorder>
 					<Stack gap="md">
 						<Title order={1} ta="center">
-							Baby & Toddler Play-in
+							{eventConfig.title}
 						</Title>
 						<Text size="lg" ta="center">
-							Hosted by Tim, Jen and James
+							Hosted by {eventConfig.hosts.join(", ")}
 						</Text>
 
-						{playDates.map((date, index) => (
+						{eventConfig.dates.map((date, index) => (
 							<Card key={index} withBorder p="md">
 								<Group justify="space-between">
 									<Group>
@@ -124,36 +55,35 @@ export default function PlayDatePage() {
 
 						<Group justify="center" gap="xs">
 							<IconBabyBottle size={20} />
-							<Text>Ages 0-2</Text>
+							<Text>Ages {eventConfig.details.ageRange}</Text>
 							<Text>•</Text>
-							<Text>Free Event</Text>
+							<Text>{eventConfig.details.cost}</Text>
 						</Group>
 					</Stack>
 				</Card>
 
 				<Card shadow="sm" p="xl" radius="md" withBorder>
 					<Text size="lg" ta="center" mb="xl">
-						We're hosting a baby and toddler play-in at our house, and you're
-						invited!
+						{eventConfig.details.description}
 					</Text>
 
 					<Box mb="xl">
 						<Text
 							component="a"
-							href="https://maps.apple.com/?address=272 Strines Road, Sk6 7GB"
+							href={eventConfig.location.mapsUrl}
 							target="_blank"
 							rel="noopener noreferrer"
 							c="teal"
 						>
-							272 Strines Road
+							{eventConfig.location.address}
 						</Text>
-						<Text c="dimmed">SK6 7GB</Text>
+						<Text c="dimmed">{eventConfig.location.postcode}</Text>
 					</Box>
 
 					<Title order={2} mb="md">
 						Q&A
 					</Title>
-					<FAQ questions={questions} />
+					<FAQ questions={faqConfig.questions} />
 
 					<Group justify="center" mt="xl">
 						<Button
@@ -166,7 +96,7 @@ export default function PlayDatePage() {
 						</Button>
 						<Button
 							component="a"
-							href="https://m.me/tdobson"
+							href={eventConfig.contact.facebook}
 							target="_blank"
 							rel="noopener noreferrer"
 							leftSection={<IconBrandFacebook size={20} />}
