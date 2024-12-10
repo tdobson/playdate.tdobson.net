@@ -87,15 +87,23 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
           <Card withBorder>
             <Stack gap="md">
               <Title order={2}>Contact</Title>
-              <Text>Email: {stream.contact.email.join('')}</Text>
-              <Button 
-                component="a"
-                href={stream.contact.facebook}
-                target="_blank"
-                variant="light"
-              >
-                Message on Facebook
-              </Button>
+              <Group>
+                <Button 
+                  component="a"
+                  href={`mailto:${stream.contact.email.join('')}`}
+                  variant="light"
+                >
+                  Email Us
+                </Button>
+                <Button 
+                  component="a"
+                  href={stream.contact.facebook}
+                  target="_blank"
+                  variant="light"
+                >
+                  Message on Facebook
+                </Button>
+              </Group>
             </Stack>
           </Card>
 
