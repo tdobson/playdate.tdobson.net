@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 import eventsConfig from '../../config/events.json';
 
 const colors = {
-  schedule: '#228BE6',    // blue
   dadsClub: '#BE4BDB',    // grape
   thursdayPlayin: '#E64980'  // pink
 };
@@ -15,21 +14,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const [opened, { toggle, close }] = useDisclosure();
   const router = useRouter();
 
-  // Create links array dynamically from event streams
-  const links = [
-    { 
-      icon: IconCalendar, 
-      label: 'Schedule', 
-      href: '/', 
-      color: colors.schedule 
-    },
-    ...eventsConfig.eventStreams.map(stream => ({
-      icon: IconBabyBottle,
-      label: stream.title,
-      href: `/events/${stream.id}`,
-      color: stream.id === 'dads-club' ? colors.dadsClub : colors.thursdayPlayin
-    }))
-  ];
+  // Create links array directly from event streams
+  const links = eventsConfig.eventStreams.map(stream => ({
+    icon: IconBabyBottle,
+    label: stream.title,
+    href: `/events/${stream.id}`,
+    color: stream.id === 'dads-club' ? colors.dadsClub : colors.thursdayPlayin
+  }));
 
   return (
     <AppShell
