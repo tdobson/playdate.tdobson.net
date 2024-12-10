@@ -1,10 +1,6 @@
 {
 	"shared": [
-		{
-			"q": "Why are you doing this?",
-			"a": "We found it difficult to arrange playdates with people due to all the challenges of arranging diaries. This avoids the need to do that, and makes it much easier to welcome people who are free, and meetup with people more who we might not see so much"
-		},
-		{
+				{
 			"q": "Do I need to RSVP?",
 			"a": "Nope - just turn up. If you make it yay, if life gets in the way, such is life!"
 		},
@@ -54,11 +50,7 @@
 		},
 		{
 			"q": "Does it cost anything?",
-			"a": "Don't be silly! Absolutely not."
-		},
-		{
-			"q": "Can I come if I've never met you before?",
-			"a": "Probably not this time - generally this one is aimed as people at people we know."
+			"a": "Absolutely not."
 		}
 	]
 }
