@@ -10,12 +10,12 @@ export interface EventDate {
 }
 
 export interface Event extends EventDate {
-  type: 'dads' | 'regular';
-  hosts: string[];
-  details: {
-    ageRange: string;
-    cost: string;
-  };
+	type: "dads" | "regular";
+	hosts: string[];
+	details: {
+		ageRange: string;
+		cost: string;
+	};
 }
 
 export interface EventStream {
