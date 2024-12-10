@@ -8,7 +8,7 @@ import type { EventsConfig } from '../types/events';
 export default function SchedulePage() {
   // Type assertion and validation
   const config = eventsConfig as EventsConfig;
-  
+
   if (!config.eventStreams?.length) {
     return (
       <Layout>
@@ -20,7 +20,7 @@ export default function SchedulePage() {
   }
 
   // Combine all future dates from all streams
-  const allFutureEvents = config.eventStreams.flatMap(stream => 
+  const allFutureEvents = config.eventStreams.flatMap(stream =>
     stream.dates
       .filter(date => new Date(date.date) >= new Date())
       .map(date => ({
@@ -40,11 +40,11 @@ export default function SchedulePage() {
             {allFutureEvents.map((event) => (
               <Timeline.Item
                 key={event.id}
-                bullet={<IconCalendar size={80} />}
+                bullet={<IconCalendar size={30} />}
                 title={
                   <Group gap="xs">
-                    <Link 
-                      href={`/events/${event.streamId}`} 
+                    <Link
+                      href={`/events/${event.streamId}`}
                       style={{ textDecoration: 'none', color: 'inherit' }}
                     >
                       <Text fw={500}>
@@ -55,7 +55,7 @@ export default function SchedulePage() {
                 }
               >
                 <Text size="sm" c="dimmed">
-                  {new Date(event.date).toLocaleDateString('en-GB', { 
+                  {new Date(event.date).toLocaleDateString('en-GB', {
                     weekday: 'long',
                     day: 'numeric',
                     month: 'long',
@@ -93,7 +93,7 @@ export default function SchedulePage() {
                 style={{ textDecoration: 'none' }}
               >
                 <Group>
-                  <IconBabyBottle size={50} color={stream.id === 'dads-club' ? 'var(--mantine-color-grape-6)' : 'var(--mantine-color-pink-6)'} />
+                  <IconBabyBottle size={30} color={stream.id === 'dads-club' ? 'var(--mantine-color-grape-6)' : 'var(--mantine-color-pink-6)'} />
                   <div>
                     <Title order={3} c={stream.id === 'dads-club' ? 'grape' : 'pink'}>
                       {stream.id === 'dads-club' ? "Dad's Club Playdates" : "Thursday Playdates"}
