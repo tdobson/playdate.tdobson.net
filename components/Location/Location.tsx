@@ -22,7 +22,7 @@ export function Location({ location, variant = 'full' }: LocationProps) {
   if (variant === 'compact') {
     return (
       <Card withBorder>
-        <Stack gap="xs">
+        <Stack gap={8}>
         <Group>
           <IconMapPin size={20} color="gray" />
           <Text>{formattedAddress}</Text>
@@ -80,7 +80,7 @@ export function Location({ location, variant = 'full' }: LocationProps) {
 
   return (
     <Card withBorder>
-      <Stack gap="md">
+      <Stack gap={16}>
       <Group>
         <IconMapPin size={24} />
         <Title order={2}>Location</Title>
