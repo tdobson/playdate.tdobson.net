@@ -53,7 +53,7 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
               <Title order={2}>Upcoming Dates</Title>
               {futureEvents.map(event => (
                 <Card key={event.id} withBorder>
-                  <Group position="apart">
+                  <Group justify="apart">
                     <Stack gap="xs">
                       <Text fw={500}>
                         {new Date(event.date).toLocaleDateString('en-GB', {

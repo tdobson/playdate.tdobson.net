@@ -73,7 +73,6 @@ export default function EventPage({ stream, event }: EventPageProps) {
                 </Group>
 
                 {stream.location.transport?.bus && (
-                  {stream.location.transport?.bus && (
                     <Group>
                       <IconBus size={20} color="gray" />
                       <Stack gap={4}>

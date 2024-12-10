@@ -1,3 +1,4 @@
+import React from 'react';
 import { AppShell, Burger, Group, NavLink } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconCalendar, IconBabyBottle, IconHome } from '@tabler/icons-react';
