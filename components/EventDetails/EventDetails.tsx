@@ -4,7 +4,8 @@ import {
   IconCalendar, 
   IconBabyCarriage, 
   IconCurrencyPound,
-  IconCalendarEvent 
+  IconCalendarEvent,
+  IconUsers 
 } from '@tabler/icons-react';
 import type { EventStream, EventDate } from '../../types/events';
 
@@ -41,6 +42,11 @@ export function EventDetails({ stream, event }: EventDetailsProps) {
             </Group>
           </>
         )}
+
+        <Group>
+          <IconUsers size={20} color="gray" />
+          <Text>Your hosts: {stream.hosts.join(', ')}</Text>
+        </Group>
 
         <Group>
           <IconBabyCarriage size={20} color="gray" />
