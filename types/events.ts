@@ -27,6 +27,20 @@ export interface EventStream {
 		postcode: string;
 		parking: string;
 		mapsUrl: string;
+		transport?: {
+			bus?: {
+				route: string;
+				description: string;
+				timetableUrl: string;
+				liveTimesUrl: string;
+			};
+			train?: {
+				station: string;
+				walkTime: string;
+				connections: string;
+				timetableUrl: string;
+			};
+		};
 	};
 	contact: {
 		email: string[];
