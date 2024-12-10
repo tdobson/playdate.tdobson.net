@@ -23,7 +23,7 @@ export function Location({ location, variant = 'full' }: LocationProps) {
     return (
       <Card withBorder>
         <Stack gap={8}>
-        <Group>
+          <Group>
           <IconMapPin size={20} color="gray" />
           <Text>{formattedAddress}</Text>
         </Group>
@@ -74,7 +74,8 @@ export function Location({ location, variant = 'full' }: LocationProps) {
         >
           Open in Maps
         </Button>
-      </Stack>
+        </Stack>
+      </Card>
     );
   }
 
