@@ -41,6 +41,14 @@ export default function SchedulePage() {
               <Timeline.Item
                 key={event.id}
                 bullet={<IconCalendar size={24} />}
+                sx={{ 
+                  cursor: 'pointer',
+                  transition: 'transform 0.2s ease',
+                  '&:hover': {
+                    transform: 'translateX(5px)'
+                  }
+                }}
+                onClick={() => window.location.href = `/events/${event.streamId}/${event.id}`}
                 title={
                   <Group gap="xs">
                     <Link
@@ -72,6 +80,12 @@ export default function SchedulePage() {
                   variant="light"
                   size="xs"
                   mt="xs"
+                  sx={{
+                    transition: 'transform 0.2s ease',
+                    '&:hover': {
+                      transform: 'scale(1.05)'
+                    }
+                  }}
                 >
                   View Details
                 </Button>
@@ -89,7 +103,13 @@ export default function SchedulePage() {
                 withBorder
                 component={Link}
                 href={`/events/${stream.id}`}
-                style={{ textDecoration: 'none' }}
+                sx={{ 
+                  textDecoration: 'none',
+                  transition: 'transform 0.2s ease',
+                  '&:hover': {
+                    transform: 'translateY(-5px)'
+                  }
+                }}
               >
                 <Group>
                   <IconBabyBottle size={30} color={stream.id === 'dads-club' ? 'var(--mantine-color-grape-6)' : 'var(--mantine-color-pink-6)'} />
