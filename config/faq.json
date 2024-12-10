@@ -5,12 +5,32 @@
 			"a": "Nope - just turn up. If you make it yay, if life gets in the way, such is life!"
 		},
 		{
-			"q": "What's the age range?",
-			"a": "0-3 years is probably the best age, but if you need to bring older siblings, that's fine - drop us a message"
+			"q": "What if I'm late?",
+			"a": "That's chill. Arrive when you arrive."
 		},
 		{
 			"q": "Where can we park?",
 			"a": "Park on road by Strines Church - 30 second walk away"
+		},
+		{
+			"q": "Does it cost anything?",
+			"a": "Absolutely not."
+		},
+		{
+			"q": "What's the age range?",
+			"a": "0-3 years is probably the best age, but if you need to bring older siblings, that's fine - drop us a message"
+		},
+		{
+			"q": "I don't know you very well, can I come?",
+			"a": "Yep - please do. If you're reading this, and your child is in the age range - please do"
+		},
+		{
+			"q": "Can I invite my friend with their kids?",
+			"a": "Probably, but drop us a line first"
+		},
+		{
+			"q": "How many people are coming?",
+			"a": "As many as come. If it's many, great, if it's a few - also great."
 		},
 		{
 			"q": "What will we do?",
@@ -21,24 +41,8 @@
 			"a": "If the weather's nice, we have a slide and baby swing! The ground is quite boggy though, so full outdoor suits and outdoor shoes or wellies are recommended. We also have an indoor trampoline and plenty of room indoors."
 		},
 		{
-			"q": "How many people are coming?",
-			"a": "As many as come. If it's many, great, if it's a few - also great."
-		},
-		{
-			"q": "I don't know you very well, can I come?",
-			"a": "Yep - please do. If you're reading this, and your child is in the age range - please do"
-		},
-		{
 			"q": "Shall I bring food?",
 			"a": "We'll do some snacky finger food like toast for the youth, but if there's snacks you think you or other adults would enjoy, please feel free to bring it along. Please only bring things you'd be willing to take home."
-		},
-		{
-			"q": "What if I'm late?",
-			"a": "That's chill. Arrive when you arrive."
-		},
-		{
-			"q": "Can I invite my friend with their kids?",
-			"a": "Probably, but drop us a line first"
 		},
 		{
 			"q": "Can we bring this specific toy or toys?",
@@ -51,10 +55,6 @@
 		{
 			"q": "I can't make this one, will you do it again?",
 			"a": "Hopefully!"
-		},
-		{
-			"q": "Does it cost anything?",
-			"a": "Absolutely not."
 		}
 	]
 }
