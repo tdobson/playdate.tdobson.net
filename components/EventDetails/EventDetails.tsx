@@ -42,8 +42,6 @@ export function EventDetails({ stream, event }: EventDetailsProps) {
           </>
         )}
 
-        <Text>{stream.details.description}</Text>
-        
         <Group>
           <IconBabyCarriage size={20} color="gray" />
           <Text>0-3 years</Text>
@@ -58,6 +56,8 @@ export function EventDetails({ stream, event }: EventDetailsProps) {
           <IconCalendarEvent size={20} color="gray" />
           <Text>No RSVP required</Text>
         </Group>
+
+        <Text>{stream.details.description}</Text>
       </Stack>
     </Card>
   );
