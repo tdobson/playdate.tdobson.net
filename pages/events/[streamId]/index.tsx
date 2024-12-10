@@ -42,14 +42,16 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
                   withBorder
                   component={Link}
                   href={`/events/${stream.id}/${event.id}`}
-                  sx={{
-                    cursor: 'pointer',
-                    transition: 'all 0.2s ease',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    '&:hover': {
-                      transform: 'translateX(5px)',
-                      backgroundColor: 'var(--mantine-color-gray-0)',
+                  styles={{
+                    root: {
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease',
+                      textDecoration: 'none',
+                      color: 'inherit',
+                      '&:hover': {
+                        transform: 'translateX(5px)',
+                        backgroundColor: 'var(--mantine-color-gray-0)',
+                      }
                     }
                   }}
                 >

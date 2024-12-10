@@ -41,15 +41,17 @@ export default function SchedulePage() {
               <Timeline.Item
                 key={event.id}
                 bullet={<IconCalendar size={24} />}
-                sx={{ 
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease',
-                  '&:hover': {
-                    transform: 'translateX(5px)',
-                    backgroundColor: 'var(--mantine-color-gray-0)',
-                    borderRadius: '8px',
-                    '& .mantine-Timeline-itemTitle': {
-                      color: 'var(--mantine-color-blue-6)'
+                styles={{ 
+                  item: {
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    '&:hover': {
+                      transform: 'translateX(5px)',
+                      backgroundColor: 'var(--mantine-color-gray-0)',
+                      borderRadius: '8px',
+                      '& .mantine-Timeline-itemTitle': {
+                        color: 'var(--mantine-color-blue-6)'
+                      }
                     }
                   }
                 }}
@@ -108,11 +110,13 @@ export default function SchedulePage() {
                 withBorder
                 component={Link}
                 href={`/events/${stream.id}`}
-                sx={{ 
-                  textDecoration: 'none',
-                  transition: 'transform 0.2s ease',
-                  '&:hover': {
-                    transform: 'translateY(-5px)'
+                styles={{ 
+                  root: {
+                    textDecoration: 'none',
+                    transition: 'transform 0.2s ease',
+                    '&:hover': {
+                      transform: 'translateY(-5px)'
+                    }
                   }
                 }}
               >
