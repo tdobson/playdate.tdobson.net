@@ -40,14 +40,14 @@ export default function SchedulePage() {
             {allFutureEvents.map((event) => (
               <Timeline.Item
                 key={event.id}
-                bullet={<IconCalendar size={24} />}
+                bullet={<IconCalendar size={50} />}
                 title={
                   <Group gap="xs">
                     <Link 
                       href={`/events/${event.streamId}`} 
                       style={{ textDecoration: 'none', color: 'inherit' }}
                     >
-                      <Text fw={500} c={event.streamId === 'dads-club' ? 'grape' : 'pink'}>
+                      <Text fw={500}>
                         {event.streamTitle}
                       </Text>
                     </Link>
