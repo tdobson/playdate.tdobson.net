@@ -4,16 +4,15 @@ export interface Question {
 }
 
 export interface EventDate {
+  id: string;
   date: string;
   time: string;
 }
 
-export interface Event {
+export interface EventStream {
   id: string;
-  type: 'regular' | 'dads';
   title: string;
   hosts: string[];
-  dates: EventDate[];
   location: {
     address: string;
     postcode: string;
@@ -29,4 +28,10 @@ export interface Event {
     cost: string;
     description: string;
   };
+  dates: EventDate[];
+  faq: Question[];
+}
+
+export interface EventsConfig {
+  eventStreams: EventStream[];
 }
