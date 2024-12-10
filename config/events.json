@@ -8,7 +8,15 @@
 				"address": "272 Strines Road",
 				"postcode": "SK6 7GB",
 				"parking": "Park on road by Strines Church - 30 second walk away",
-				"mapsUrl": "https://maps.apple.com/?address=272 Strines Road, Sk6 7GB"
+				"mapsUrl": "https://maps.apple.com/?address=272 Strines Road, Sk6 7GB",
+				"transport": {
+					"bus": {
+						"route": "358",
+						"description": "The 358 bus (Stockport - Hayfield) stops within 30 seconds of our door",
+						"timetableUrl": "https://assets.ctfassets.net/nv7y93idf4jq/3z3BDfIqiVMotc7XpaKYxr/236cdf5367d61d046efb9d889f262a9c/358__360_Stockport_24-SC-0114.pdf",
+						"liveTimesUrl": "https://tfgm.com/travel-updates/live-departures/bus/358-stockport"
+					}
+				}
 			},
 			"contact": {
 				"email": ["timandjen", "@", "tdobson.net"],
