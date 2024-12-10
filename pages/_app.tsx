@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta 
           name="description" 
-          content="Join us for a relaxed baby and toddler play-in in Strines. Free event for ages 0-2, hosted by Tim, Jen and James. No booking required!" 
+          content="Join us for a relaxed baby and toddler play-in in Strines. Free event for ages 0-3, hosted by Tim, Jen and James. No booking required!" 
         />
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
