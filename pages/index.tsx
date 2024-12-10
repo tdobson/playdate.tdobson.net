@@ -40,7 +40,8 @@ export default function SchedulePage() {
             {allFutureEvents.map((event) => (
               <Timeline.Item
                 key={event.id}
-                bullet={<IconCalendar size={30} />}
+                bullet={<IconCalendar size={20} />}
+                bulletSize={32}
                 title={
                   <Group gap="xs">
                     <Link
