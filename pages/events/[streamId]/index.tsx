@@ -2,14 +2,14 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { Container, Stack, Title, Card, Text, Button, Group } from '@mantine/core';
 import { 
   IconMapPin, 
-  IconParking, 
   IconBus, 
+  IconTrain, 
+  IconCar, 
   IconClock, 
   IconCalendar,
   IconMail,
   IconBrandFacebook,
   IconBabyCarriage,
-  IconCash,
   IconExternalLink 
 } from '@tabler/icons-react';
 import Link from 'next/link';
