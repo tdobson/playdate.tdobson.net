@@ -3,10 +3,24 @@ import { IconCalendar } from '@tabler/icons-react';
 import Link from 'next/link';
 import { Layout } from '../components/Layout/Layout';
 import eventsConfig from '../config/events.json';
+import type { EventsConfig } from '../types/questions';
 
 export default function SchedulePage() {
+  // Type assertion and validation
+  const config = eventsConfig as EventsConfig;
+  
+  if (!config.eventStreams?.length) {
+    return (
+      <Layout>
+        <Container size="md">
+          <Text>No events currently scheduled</Text>
+        </Container>
+      </Layout>
+    );
+  }
+
   // Combine all future dates from all streams
-  const allFutureEvents = eventsConfig.eventStreams.flatMap(stream => 
+  const allFutureEvents = config.eventStreams.flatMap(stream => 
     stream.dates
       .filter(date => new Date(date.date) >= new Date())
       .map(date => ({

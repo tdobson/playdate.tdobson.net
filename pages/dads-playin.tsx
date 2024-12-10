@@ -4,9 +4,33 @@ import { EventInfo } from '../components/EventInfo/EventInfo';
 import { FAQ } from '../components/FAQ/FAQ';
 import eventsConfig from '../config/events.json';
 import faqConfig from '../config/faq.json';
+import type { EventsConfig } from '../types/events.types';
 
 export default function DadsPlayinPage() {
-  // Create an event object from the config that matches the Event type
+  const config = eventsConfig as EventsConfig;
+  
+  if (!config.eventStreams?.length) {
+    return (
+      <Layout>
+        <Container size="md">
+          <Text>Event not found</Text>
+        </Container>
+      </Layout>
+    );
+  }
+
+  const dadsStream = config.eventStreams.find(stream => stream.id === 'dads-club');
+  
+  if (!dadsStream) {
+    return (
+      <Layout>
+        <Container size="md">
+          <Text>Dads club event stream not found</Text>
+        </Container>
+      </Layout>
+    );
+  }
+
   const event = {
     id: 'dads-playin',
     type: 'dads' as const,
