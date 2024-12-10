@@ -1,18 +1,14 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import React from 'react';
-import { Container, Stack, Title, Card, Text, Button, Group, Accordion } from '@mantine/core';
+import { Container, Stack, Title, Card, Text, Button, Group } from '@mantine/core';
 import { 
-  IconMapPin, 
-  IconBus, 
-  IconTrain, 
-  IconCar, 
   IconClock, 
   IconCalendar,
   IconMail,
   IconBrandFacebook,
-  IconBabyCarriage,
-  IconExternalLink 
+  IconBabyCarriage
 } from '@tabler/icons-react';
+import { Location } from '../../../components/Location/Location';
 import Link from 'next/link';
 import { Layout } from '../../../components/Layout/Layout';
 import { FAQ } from '../../../components/FAQ/FAQ';
@@ -80,67 +76,7 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
           </Card>
 
           <Card withBorder>
-            <Stack gap="md">
-              <Group>
-                <IconMapPin size={24} />
-                <Title order={2}>Location</Title>
-              </Group>
-              
-              <Stack gap="xs">
-                <Group>
-                  <IconMapPin size={20} color="gray" />
-                  <Text>{stream.location.address}</Text>
-                </Group>
-                <Text>{stream.location.postcode}</Text>
-                
-                <Group>
-                  <IconCar size={20} color="gray" />
-                  <Text size="sm">{stream.location.parking}</Text>
-                </Group>
-
-                {stream.location.transport?.bus && (
-                  <Group>
-                    <IconBus size={20} color="gray" />
-                    <Stack gap={4}>
-                      <Text>Bus {stream.location.transport.bus.route}</Text>
-                      <Text size="sm" c="dimmed">{stream.location.transport.bus.description}</Text>
-                      <Group>
-                        <Button 
-                          component="a"
-                          href={stream.location.transport.bus.timetableUrl}
-                          target="_blank"
-                          variant="light"
-                          size="xs"
-                          leftSection={<IconExternalLink size={16} />}
-                        >
-                          View Timetable
-                        </Button>
-                        <Button
-                          component="a"
-                          href={stream.location.transport.bus.liveTimesUrl}
-                          target="_blank"
-                          variant="light"
-                          size="xs"
-                          leftSection={<IconClock size={16} />}
-                        >
-                          Live Times
-                        </Button>
-                      </Group>
-                    </Stack>
-                  </Group>
-                )}
-              </Stack>
-
-              <Button 
-                component="a" 
-                href={stream.location.mapsUrl}
-                target="_blank"
-                variant="light"
-                leftSection={<IconMapPin size={20} />}
-              >
-                Open in Maps
-              </Button>
-            </Stack>
+            <Location location={stream.location} variant="compact" />
           </Card>
 
           <Card withBorder>
