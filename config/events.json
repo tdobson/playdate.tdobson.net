@@ -1,75 +1,75 @@
 {
-  "eventStreams": [
-    {
-      "id": "dads-club",
-      "title": "Dad's Club Playdate",
-      "hosts": ["Tim", "James"],
-      "location": {
-        "address": "272 Strines Road",
-        "postcode": "SK6 7GB",
-        "parking": "Park on road by Strines Church - 30 second walk away",
-        "mapsUrl": "https://maps.apple.com/?address=272 Strines Road, Sk6 7GB"
-      },
-      "contact": {
-        "email": ["timandjen", "@", "tdobson.net"],
-        "facebook": "https://m.me/tdobson"
-      },
-      "details": {
-        "ageRange": "0-2",
-        "cost": "Free Event",
-        "description": "A special playdate just for dads and their little ones!"
-      },
-      "dates": [
-        {
-          "id": "dads-dec-14",
-          "date": "2024-12-14",
-          "time": "14:00-17:00"
-        },
-        {
-          "id": "dads-dec-21", 
-          "date": "2024-12-21",
-          "time": "14:00-17:00"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Can I bring my partner?",
-          "a": "This event is specifically for dads and their children to promote father-child bonding time."
-        }
-      ]
-    },
-    {
-      "id": "thursday-playin",
-      "title": "Thursday Playdate",
-      "hosts": ["Tim", "Jen", "James"],
-      "location": {
-        "address": "272 Strines Road",
-        "postcode": "SK6 7GB",
-        "parking": "Park on road by Strines Church - 30 second walk away",
-        "mapsUrl": "https://maps.apple.com/?address=272 Strines Road, Sk6 7GB"
-      },
-      "contact": {
-        "email": ["timandjen", "@", "tdobson.net"],
-        "facebook": "https://m.me/tdobson"
-      },
-      "details": {
-        "ageRange": "0-2",
-        "cost": "Free Event",
-        "description": "We're hosting a baby and toddler play-in at our house, and you're invited!"
-      },
-      "dates": [
-        {
-          "id": "thursday-dec-12",
-          "date": "2024-12-12",
-          "time": "14:00-17:00"
-        }
-      ],
-      "faq": [
-        {
-          "q": "Can I bring siblings?",
-          "a": "Yes, siblings are welcome! Our space and activities are best suited for ages 0-2, but we understand if you need to bring older children."
-        }
-      ]
-    }
-  ]
+	"eventStreams": [
+		{
+			"id": "dads-club",
+			"title": "Dad's Club Playdate",
+			"hosts": ["Tim", "James"],
+			"location": {
+				"address": "272 Strines Road",
+				"postcode": "SK6 7GB",
+				"parking": "Park on road by Strines Church - 30 second walk away",
+				"mapsUrl": "https://maps.apple.com/?address=272 Strines Road, Sk6 7GB"
+			},
+			"contact": {
+				"email": ["timandjen", "@", "tdobson.net"],
+				"facebook": "https://m.me/tdobson"
+			},
+			"details": {
+				"ageRange": "0-2",
+				"cost": "Free Event",
+				"description": "A special playdate just for dads and their little ones!"
+			},
+			"dates": [
+				{
+					"id": "dads-dec-14",
+					"date": "2024-12-14",
+					"time": "14:00-17:00"
+				},
+				{
+					"id": "dads-dec-21",
+					"date": "2024-12-21",
+					"time": "14:00-17:00"
+				}
+			],
+			"faq": [
+				{
+					"q": "Can I bring my partner?",
+					"a": "This event is specifically for dads and their children to promote father-child bonding time."
+				}
+			]
+		},
+		{
+			"id": "thursday-playin",
+			"title": "Thursday Playdate",
+			"hosts": ["Tim", "Jen", "James"],
+			"location": {
+				"address": "272 Strines Road",
+				"postcode": "SK6 7GB",
+				"parking": "Park on road by Strines Church - 30 second walk away",
+				"mapsUrl": "https://maps.apple.com/?address=272 Strines Road, Sk6 7GB"
+			},
+			"contact": {
+				"email": ["timandjen", "@", "tdobson.net"],
+				"facebook": "https://m.me/tdobson"
+			},
+			"details": {
+				"ageRange": "0-2",
+				"cost": "Free Event",
+				"description": "We're hosting a baby and toddler play-in at our house, and you're invited!"
+			},
+			"dates": [
+				{
+					"id": "thursday-dec-12",
+					"date": "2024-12-12",
+					"time": "14:00-17:00"
+				}
+			],
+			"faq": [
+				{
+					"q": "Can I bring siblings?",
+					"a": "Yes, siblings are welcome! Our space and activities are best suited for ages 0-2, but we understand if you need to bring older children."
+				}
+			]
+		}
+	]
 }
