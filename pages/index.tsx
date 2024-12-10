@@ -73,7 +73,6 @@ export default function SchedulePage() {
                   variant="light"
                   size="xs"
                   mt="xs"
-                  color="gray"
                 >
                   View Details
                 </Button>
