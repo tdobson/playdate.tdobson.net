@@ -31,16 +31,25 @@ export default function EventPage({ stream, event }: EventPageProps) {
           
           <Card withBorder>
             <Stack gap="md">
-              <Title order={2}>Event Details</Title>
-              <Text fw={500}>
-                {new Date(event.date).toLocaleDateString('en-GB', {
-                  weekday: 'long',
-                  day: 'numeric',
-                  month: 'long',
-                  year: 'numeric'
-                })}
-              </Text>
-              <Text>{event.time}</Text>
+              <Group>
+                <IconCalendar size={24} />
+                <Title order={2}>Event Details</Title>
+              </Group>
+              <Group>
+                <IconCalendar size={20} color="gray" />
+                <Text fw={500}>
+                  {new Date(event.date).toLocaleDateString('en-GB', {
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                  })}
+                </Text>
+              </Group>
+              <Group>
+                <IconClock size={20} color="gray" />
+                <Text>{event.time}</Text>
+              </Group>
             </Stack>
           </Card>
 
@@ -63,35 +72,37 @@ export default function EventPage({ stream, event }: EventPageProps) {
                   <Text size="sm">{stream.location.parking}</Text>
                 </Group>
 
-                <Group>
-                  <IconBus size={20} color="gray" />
-                  <Stack gap={4}>
-                    <Text>Bus {stream.location.transport.bus.route}</Text>
-                    <Text size="sm" c="dimmed">{stream.location.transport.bus.description}</Text>
-                    <Group>
-                      <Button 
-                        component="a"
-                        href={stream.location.transport.bus.timetableUrl}
-                        target="_blank"
-                        variant="light"
-                        size="xs"
-                        leftSection={<IconExternalLink size={16} />}
-                      >
-                        View Timetable
-                      </Button>
-                      <Button
-                        component="a"
-                        href={stream.location.transport.bus.liveTimesUrl}
-                        target="_blank"
-                        variant="light"
-                        size="xs"
-                        leftSection={<IconClock size={16} />}
-                      >
-                        Live Times
-                      </Button>
-                    </Group>
-                  </Stack>
-                </Group>
+                {stream.location.transport?.bus && (
+                  <Group>
+                    <IconBus size={20} color="gray" />
+                    <Stack gap={4}>
+                      <Text>Bus {stream.location.transport.bus.route}</Text>
+                      <Text size="sm" c="dimmed">{stream.location.transport.bus.description}</Text>
+                      <Group>
+                        <Button 
+                          component="a"
+                          href={stream.location.transport.bus.timetableUrl}
+                          target="_blank"
+                          variant="light"
+                          size="xs"
+                          leftSection={<IconExternalLink size={16} />}
+                        >
+                          View Timetable
+                        </Button>
+                        <Button
+                          component="a"
+                          href={stream.location.transport.bus.liveTimesUrl}
+                          target="_blank"
+                          variant="light"
+                          size="xs"
+                          leftSection={<IconClock size={16} />}
+                        >
+                          Live Times
+                        </Button>
+                      </Group>
+                    </Stack>
+                  </Group>
+                )}
               </Stack>
 
               <Button 
@@ -114,6 +125,7 @@ export default function EventPage({ stream, event }: EventPageProps) {
                   component="a"
                   href={`mailto:${stream.contact.email.join('')}`}
                   variant="light"
+                  leftSection={<IconMail size={20} />}
                 >
                   Email Us
                 </Button>
@@ -122,6 +134,7 @@ export default function EventPage({ stream, event }: EventPageProps) {
                   href={stream.contact.facebook}
                   target="_blank"
                   variant="light"
+                  leftSection={<IconBrandFacebook size={20} />}
                 >
                   Message on Facebook
                 </Button>
