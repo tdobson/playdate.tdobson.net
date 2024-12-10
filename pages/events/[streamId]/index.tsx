@@ -70,10 +70,12 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
                     <Button
                       component="div"
                       variant="light"
-                      sx={{
-                        transition: 'transform 0.2s ease',
-                        '&:hover': {
-                          transform: 'scale(1.05)'
+                      styles={{
+                        root: {
+                          transition: 'transform 0.2s ease',
+                          '&:hover': {
+                            transform: 'scale(1.05)'
+                          }
                         }
                       }}
                     >

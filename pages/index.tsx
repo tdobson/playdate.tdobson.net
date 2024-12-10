@@ -87,10 +87,12 @@ export default function SchedulePage() {
                   variant="light"
                   size="xs"
                   mt="xs"
-                  sx={{
-                    transition: 'transform 0.2s ease',
-                    '&:hover': {
-                      transform: 'scale(1.05)'
+                  styles={{
+                    root: {
+                      transition: 'transform 0.2s ease',
+                      '&:hover': {
+                        transform: 'scale(1.05)'
+                      }
                     }
                   }}
                 >
