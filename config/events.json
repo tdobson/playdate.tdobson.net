@@ -104,13 +104,13 @@
 					"time": "09:30-11:00"
 				}
 			],
-			"faq": [
+			"faq": [{
+				"q": "Why are you doing this?",
+				"a": "We usually go to a playgroup at Inside Out in New Mills, but it's on holiday. We're keen to welcome everyone round for some festive playing at our house."
+			},
 				{
 					"q": "Can I bring siblings?",
 					"a": "Yes, siblings are welcome! Our space and activities are best suited for ages 0-3, but we understand if you need to bring older children."
-				}, {
-					"q": "Why are you doing this?",
-					"a": "We usually go to a playgroup at Inside Out in New Mills, but it's on holiday. We're keen to welcome everyone round for some festive playing at our house."
 				}
 			]
 		}
