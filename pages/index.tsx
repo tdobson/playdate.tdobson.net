@@ -47,7 +47,9 @@ export default function SchedulePage() {
                       href={`/events/${event.streamId}`} 
                       style={{ textDecoration: 'none', color: 'inherit' }}
                     >
-                      <Text fw={500}>{event.streamTitle}</Text>
+                      <Text fw={500} c={event.streamId === 'dads-club' ? 'grape' : 'pink'}>
+                        {event.streamTitle}
+                      </Text>
                     </Link>
                   </Group>
                 }
@@ -70,6 +72,7 @@ export default function SchedulePage() {
                   variant="light"
                   size="xs"
                   mt="xs"
+                  color={event.streamId === 'dads-club' ? 'grape' : 'pink'}
                 >
                   View Details
                 </Button>
