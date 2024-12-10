@@ -10,7 +10,8 @@ import {
   IconBrandFacebook,
   IconBabyCarriage,
   IconCash,
-  IconExternalLink 
+  IconExternalLink,
+  IconTrain
 } from '@tabler/icons-react';
 import { Layout } from '../../../components/Layout/Layout';
 import { FAQ } from '../../../components/FAQ/FAQ';
@@ -103,6 +104,29 @@ export default function EventPage({ stream, event }: EventPageProps) {
                       </Stack>
                     </Group>
                   )}
+                {stream.location.transport?.train && (
+                  <Group>
+                    <IconTrain size={20} color="gray" />
+                    <Stack gap={4}>
+                      <Text>{stream.location.transport.train.station} Station</Text>
+                      <Text size="sm" c="dimmed">
+                        {stream.location.transport.train.walkTime} walk
+                      </Text>
+                      <Text size="sm" c="dimmed">
+                        {stream.location.transport.train.connections}
+                      </Text>
+                      <Button 
+                        component="a"
+                        href={stream.location.transport.train.timetableUrl}
+                        target="_blank"
+                        variant="light"
+                        size="xs"
+                        leftSection={<IconExternalLink size={16} />}
+                      >
+                        View Train Times
+                      </Button>
+                    </Stack>
+                  </Group>
                 )}
               </Stack>
 

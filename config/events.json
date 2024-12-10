@@ -12,9 +12,15 @@
 				"transport": {
 					"bus": {
 						"route": "358",
-						"description": "The 358 bus (Stockport - Hayfield) stops within 30 seconds of our door",
+						"description": "The 358 bus (Stockport - Offerton - Marple - New Mills - Hayfield) stops within 30 seconds of our door",
 						"timetableUrl": "https://assets.ctfassets.net/nv7y93idf4jq/3z3BDfIqiVMotc7XpaKYxr/236cdf5367d61d046efb9d889f262a9c/358__360_Stockport_24-SC-0114.pdf",
 						"liveTimesUrl": "https://tfgm.com/travel-updates/live-departures/bus/358-stockport"
+					},
+					"train": {
+						"station": "Strines",
+						"walkTime": "15 minutes",
+						"connections": "Direct trains to/from Romily, Marple, and New Mills Central",
+						"timetableUrl": "https://www.northernrailway.co.uk/stations/STR"
 					}
 				}
 			},
@@ -43,6 +49,10 @@
 				{
 					"q": "Can I bring my partner?",
 					"a": "This event is specifically for dads and their children to promote father-child bonding time."
+				},
+				{
+					"q": "Will there be women organisers present?",
+					"a": "Yes, Jen will be helping host the event with Tim and James."
 				}
 			]
 		},
