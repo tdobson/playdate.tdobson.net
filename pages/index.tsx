@@ -43,9 +43,14 @@ export default function SchedulePage() {
                 bullet={<IconCalendar size={24} />}
                 sx={{ 
                   cursor: 'pointer',
-                  transition: 'transform 0.2s ease',
+                  transition: 'all 0.2s ease',
                   '&:hover': {
-                    transform: 'translateX(5px)'
+                    transform: 'translateX(5px)',
+                    backgroundColor: 'var(--mantine-color-gray-0)',
+                    borderRadius: '8px',
+                    '& .mantine-Timeline-itemTitle': {
+                      color: 'var(--mantine-color-blue-6)'
+                    }
                   }
                 }}
                 onClick={() => window.location.href = `/events/${event.streamId}/${event.id}`}
