@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { Container, Stack, Title, Card, Text, Button, Group } from '@mantine/core';
 import { Layout } from '../../../components/Layout/Layout';
+import { FAQ } from '../../../components/FAQ/FAQ';
 import eventsConfig from '../../../config/events.json';
 import type { EventStream, EventDate } from '../../../types/questions';
 
@@ -60,6 +61,13 @@ export default function EventPage({ stream, event }: EventPageProps) {
               >
                 Message on Facebook
               </Button>
+            </Stack>
+          </Card>
+
+          <Card withBorder>
+            <Stack gap="md">
+              <Title order={2}>FAQ</Title>
+              <FAQ questions={stream.faq} />
             </Stack>
           </Card>
         </Stack>
