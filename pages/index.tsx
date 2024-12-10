@@ -40,7 +40,7 @@ export default function SchedulePage() {
             {allFutureEvents.map((event) => (
               <Timeline.Item
                 key={event.id}
-                bullet={<IconCalendar size={16} />}
+                bullet={<IconCalendar size={24} />}
                 title={
                   <Group gap="xs">
                     <Link 
@@ -61,7 +61,9 @@ export default function SchedulePage() {
                   })}
                 </Text>
                 <Text size="sm" c="dimmed">{event.time}</Text>
-                <Text size="sm" c="dimmed">{config.eventStreams.find(s => s.id === event.streamId)?.location.address.split(',')[0]}</Text>
+                <Text size="sm" c="dimmed">
+                  {config.eventStreams.find(s => s.id === event.streamId)?.location.address === "272 Strines Road" ? "Strines" : config.eventStreams.find(s => s.id === event.streamId)?.location.address}
+                </Text>
                 <Button
                   component={Link}
                   href={`/events/${event.streamId}/${event.id}`}
@@ -88,9 +90,11 @@ export default function SchedulePage() {
                 style={{ textDecoration: 'none' }}
               >
                 <Group>
-                  <IconBabyBottle size={32} color={stream.id === 'dads-club' ? 'var(--mantine-color-grape-6)' : 'var(--mantine-color-pink-6)'} />
+                  <IconBabyBottle size={50} color={stream.id === 'dads-club' ? 'var(--mantine-color-grape-6)' : 'var(--mantine-color-pink-6)'} />
                   <div>
-                    <Title order={3} c={stream.id === 'dads-club' ? 'grape' : 'pink'}>{stream.title}</Title>
+                    <Title order={3} c={stream.id === 'dads-club' ? 'grape' : 'pink'}>
+                      {stream.id === 'dads-club' ? "Dad's Club Playdates" : "Thursday Playdates"}
+                    </Title>
                     <Text c="dimmed" size="sm">View all dates</Text>
                   </div>
                 </Group>
