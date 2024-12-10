@@ -45,6 +45,10 @@
 			"a": "err, sure? We have plenty, and anything you bring has a risk of getting lost - but if you think it'd be awesome, or work well for your child - please do!"
 		},
 		{
+			"q": "Why do you have such a slick website?",
+			"a": "Because \"we\" is often \"I\" and I, Tim am often bored and am a professional web developer - www.tdobson.net - so I built this \"for fun\"."
+		},
+		{
 			"q": "I can't make this one, will you do it again?",
 			"a": "Hopefully!"
 		},
