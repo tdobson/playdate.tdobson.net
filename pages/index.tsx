@@ -3,7 +3,7 @@ import { IconCalendar } from '@tabler/icons-react';
 import Link from 'next/link';
 import { Layout } from '../components/Layout/Layout';
 import eventsConfig from '../config/events.json';
-import type { EventsConfig } from '../types/questions';
+import type { EventsConfig } from '../types/events';
 
 export default function SchedulePage() {
   // Type assertion and validation

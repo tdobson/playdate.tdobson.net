@@ -1,6 +1,6 @@
 import { Accordion, Text } from "@mantine/core";
 import React from "react";
-import type { Question } from "../../types/events.types";
+import type { Question } from "../../types/events";
 
 interface FAQProps {
 	questions: Question[];

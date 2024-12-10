@@ -3,7 +3,7 @@ import { Container, Stack, Title, Card, Text, Button, Group } from '@mantine/cor
 import { Layout } from '../../../components/Layout/Layout';
 import { FAQ } from '../../../components/FAQ/FAQ';
 import eventsConfig from '../../../config/events.json';
-import type { EventStream, EventDate } from '../../../types/questions';
+import type { EventStream, EventDate } from '../../../types/events';
 
 interface EventPageProps {
   stream: EventStream;
