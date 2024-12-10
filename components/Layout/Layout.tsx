@@ -54,7 +54,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             onClick={() => close()}
             styles={{
               root: {
-                '&[data-active=true]': {
+                '&[data-active]': {
                   backgroundColor: `${link.color}19`,
                 },
               },
