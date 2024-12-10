@@ -3,7 +3,7 @@
 		{
 			"id": "dads-club",
 			"title": "Dad's Club Playdate",
-			"hosts": ["Tim","Jen", "James"],
+			"hosts": ["Tim", "Jen", "James"],
 			"location": {
 				"address": "272 Strines Road",
 				"postcode": "SK6 7GB",
@@ -49,7 +49,8 @@
 				{
 					"q": "Can I bring my partner?",
 					"a": "This event is specifically for dads and their children to promote father-child bonding time."
-				},{
+				},
+				{
 					"q": "Why are you doing this?",
 					"a": "Since Just 4 Dads @ St Chads is on holiday this week - we thought we'd host a low key event at our house."
 				},
@@ -104,10 +105,11 @@
 					"time": "09:30-11:00"
 				}
 			],
-			"faq": [{
-				"q": "Why are you doing this?",
-				"a": "We usually go to a playgroup at Inside Out in New Mills, but it's on holiday. We're keen to welcome everyone round for some festive playing at our house."
-			},
+			"faq": [
+				{
+					"q": "Why are you doing this?",
+					"a": "We usually go to a playgroup at Inside Out in New Mills, but it's on holiday. We're keen to welcome everyone round for some festive playing at our house."
+				},
 				{
 					"q": "Can I bring siblings?",
 					"a": "Yes, siblings are welcome! Our space and activities are best suited for ages 0-3, but we understand if you need to bring older children."
