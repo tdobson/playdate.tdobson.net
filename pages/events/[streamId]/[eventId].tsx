@@ -31,6 +31,13 @@ export default function EventPage({ stream, event }: EventPageProps) {
 
           <Card withBorder>
             <Stack gap="md">
+              <Title order={2}>FAQ</Title>
+              <FAQ questions={stream.faq} />
+            </Stack>
+          </Card>
+
+          <Card withBorder>
+            <Stack gap="md">
               <Title order={2}>Contact</Title>
               <Group>
                 <Button 
@@ -51,13 +58,6 @@ export default function EventPage({ stream, event }: EventPageProps) {
                   Message on Facebook
                 </Button>
               </Group>
-            </Stack>
-          </Card>
-
-          <Card withBorder>
-            <Stack gap="md">
-              <Title order={2}>FAQ</Title>
-              <FAQ questions={stream.faq} />
             </Stack>
           </Card>
         </Stack>
