@@ -97,35 +97,37 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
                   <Text size="sm">{stream.location.parking}</Text>
                 </Group>
 
-                <Group>
-                  <IconBus size={20} color="gray" />
-                  <Stack gap={4}>
-                    <Text>Bus {stream.location.transport.bus.route}</Text>
-                    <Text size="sm" c="dimmed">{stream.location.transport.bus.description}</Text>
-                    <Group>
-                      <Button 
-                        component="a"
-                        href={stream.location.transport.bus.timetableUrl}
-                        target="_blank"
-                        variant="light"
-                        size="xs"
-                        leftSection={<IconExternalLink size={16} />}
-                      >
-                        View Timetable
-                      </Button>
-                      <Button
-                        component="a"
-                        href={stream.location.transport.bus.liveTimesUrl}
-                        target="_blank"
-                        variant="light"
-                        size="xs"
-                        leftSection={<IconClock size={16} />}
-                      >
-                        Live Times
-                      </Button>
-                    </Group>
-                  </Stack>
-                </Group>
+                {stream.location.transport?.bus && (
+                  <Group>
+                    <IconBus size={20} color="gray" />
+                    <Stack gap={4}>
+                      <Text>Bus {stream.location.transport.bus.route}</Text>
+                      <Text size="sm" c="dimmed">{stream.location.transport.bus.description}</Text>
+                      <Group>
+                        <Button 
+                          component="a"
+                          href={stream.location.transport.bus.timetableUrl}
+                          target="_blank"
+                          variant="light"
+                          size="xs"
+                          leftSection={<IconExternalLink size={16} />}
+                        >
+                          View Timetable
+                        </Button>
+                        <Button
+                          component="a"
+                          href={stream.location.transport.bus.liveTimesUrl}
+                          target="_blank"
+                          variant="light"
+                          size="xs"
+                          leftSection={<IconClock size={16} />}
+                        >
+                          Live Times
+                        </Button>
+                      </Group>
+                    </Stack>
+                  </Group>
+                )}
               </Stack>
 
               <Button 
