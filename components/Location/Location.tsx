@@ -11,73 +11,12 @@ import type { EventStream } from '../../types/events';
 
 interface LocationProps {
   location: EventStream['location'];
-  variant?: 'full' | 'compact';
 }
 
-export function Location({ location, variant = 'full' }: LocationProps) {
+export function Location({ location }: LocationProps) {
   const formattedAddress = location.address === "272 Strines Road" 
     ? "272 Strines Road, Strines, SK6 7GB"
     : location.address;
-
-  if (variant === 'compact') {
-    return (
-      <Card withBorder>
-        <Stack gap={8}>
-          <Group>
-          <IconMapPin size={20} color="gray" />
-          <Text>{formattedAddress}</Text>
-        </Group>
-        
-        <Group>
-          <IconCar size={20} color="gray" />
-          <Text size="sm">{location.parking}</Text>
-        </Group>
-
-        {location.transport?.bus && (
-          <Group>
-            <IconBus size={20} color="gray" />
-            <Stack gap={4}>
-              <Text>Bus {location.transport.bus.route}</Text>
-              <Text size="sm" c="dimmed">{location.transport.bus.description}</Text>
-              <Group>
-                <Button 
-                  component="a"
-                  href={location.transport.bus.timetableUrl}
-                  target="_blank"
-                  variant="light"
-                  size="xs"
-                  leftSection={<IconExternalLink size={16} />}
-                >
-                  View Timetable
-                </Button>
-                <Button
-                  component="a"
-                  href={location.transport.bus.liveTimesUrl}
-                  target="_blank"
-                  variant="light"
-                  size="xs"
-                  leftSection={<IconClock size={16} />}
-                >
-                  Live Times
-                </Button>
-              </Group>
-            </Stack>
-          </Group>
-        )}
-
-        <Button 
-          component="a" 
-          href={location.mapsUrl}
-          target="_blank"
-          variant="light"
-          leftSection={<IconMapPin size={20} />}
-        >
-          Open in Maps
-        </Button>
-        </Stack>
-      </Card>
-    );
-  }
 
   return (
     <Card withBorder>
