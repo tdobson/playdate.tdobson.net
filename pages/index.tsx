@@ -1,5 +1,5 @@
-import { Container, Stack, Title, Timeline, Text, Button, Group } from '@mantine/core';
-import { IconCalendar } from '@tabler/icons-react';
+import { Container, Stack, Title, Timeline, Text, Button, Group, Paper, SimpleGrid } from '@mantine/core';
+import { IconCalendar, IconBabyBottle } from '@tabler/icons-react';
 import Link from 'next/link';
 import { Layout } from '../components/Layout/Layout';
 import eventsConfig from '../config/events.json';
@@ -75,19 +75,28 @@ export default function SchedulePage() {
             ))}
           </Timeline>
 
-          <Stack gap="md">
+          <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
             {eventsConfig.eventStreams.map(stream => (
-              <Button
+              <Paper
                 key={stream.id}
+                shadow="sm"
+                p="xl"
+                radius="md"
+                withBorder
                 component={Link}
                 href={`/events/${stream.id}`}
-                variant="outline"
-                fullWidth
+                style={{ textDecoration: 'none' }}
               >
-                View all {stream.title} dates
-              </Button>
+                <Group>
+                  <IconBabyBottle size={32} color={stream.id === 'dads-club' ? 'var(--mantine-color-grape-6)' : 'var(--mantine-color-pink-6)'} />
+                  <div>
+                    <Title order={3} c={stream.id === 'dads-club' ? 'grape' : 'pink'}>{stream.title}</Title>
+                    <Text c="dimmed" size="sm">View all dates</Text>
+                  </div>
+                </Group>
+              </Paper>
             ))}
-          </Stack>
+          </SimpleGrid>
         </Stack>
       </Container>
     </Layout>
