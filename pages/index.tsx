@@ -1,23 +1,20 @@
-import { Container, Stack, Title, SimpleGrid, Card, Text, Group } from '@mantine/core';
+import { Container, Stack, Title, Timeline, Text, Button, Group } from '@mantine/core';
 import { IconCalendar } from '@tabler/icons-react';
 import Link from 'next/link';
 import { Layout } from '../components/Layout/Layout';
 import eventsConfig from '../config/events.json';
 
-export default function HomePage() {
-  // Convert the dates array into event objects
-  const events = eventsConfig.dates.map(date => ({
-    type: date.type,
-    title: eventsConfig.title,
-    date: date.date,
-    time: date.time
-  }));
-
-  // Filter for upcoming events
-  const upcomingEvents = events.filter(event => {
-    const nextDate = new Date(event.date);
-    return nextDate >= new Date();
-  });
+export default function SchedulePage() {
+  // Combine all future dates from all streams
+  const allFutureEvents = eventsConfig.eventStreams.flatMap(stream => 
+    stream.dates
+      .filter(date => new Date(date.date) >= new Date())
+      .map(date => ({
+        ...date,
+        streamId: stream.id,
+        streamTitle: stream.title
+      }))
+  ).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
   return (
     <Layout>
@@ -25,28 +22,57 @@ export default function HomePage() {
         <Stack gap="xl">
           <Title>Upcoming Play-ins</Title>
 
-          <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
-            {upcomingEvents.map((event) => (
-              <Card
-                key={`${event.type}-${event.date}`}
-                shadow="sm"
-                p="xl"
-                radius="md"
-                withBorder
-                component={Link}
-                href={`/${event.type}-playin`}
-                style={{ textDecoration: 'none' }}
+          <Timeline active={-1}>
+            {allFutureEvents.map((event) => (
+              <Timeline.Item
+                key={event.id}
+                bullet={<IconCalendar size={16} />}
+                title={
+                  <Group gap="xs">
+                    <Link 
+                      href={`/events/${event.streamId}`} 
+                      style={{ textDecoration: 'none', color: 'inherit' }}
+                    >
+                      <Text fw={500}>{event.streamTitle}</Text>
+                    </Link>
+                  </Group>
+                }
               >
-                <Group>
-                  <IconCalendar size={32} color={event.type === 'dads' ? 'var(--mantine-color-grape-6)' : 'var(--mantine-color-pink-6)'} />
-                  <div>
-                    <Title order={3} c={event.type === 'dads' ? 'grape' : 'pink'}>{event.title}</Title>
-                    <Text c="dimmed" size="sm">Next: {event.date} at {event.time}</Text>
-                  </div>
-                </Group>
-              </Card>
+                <Text size="sm" c="dimmed">
+                  {new Date(event.date).toLocaleDateString('en-GB', { 
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                  })}
+                </Text>
+                <Text size="sm" c="dimmed">{event.time}</Text>
+                <Button
+                  component={Link}
+                  href={`/events/${event.streamId}/${event.id}`}
+                  variant="light"
+                  size="xs"
+                  mt="xs"
+                >
+                  View Details
+                </Button>
+              </Timeline.Item>
             ))}
-          </SimpleGrid>
+          </Timeline>
+
+          <Stack gap="md">
+            {eventsConfig.eventStreams.map(stream => (
+              <Button
+                key={stream.id}
+                component={Link}
+                href={`/events/${stream.id}`}
+                variant="outline"
+                fullWidth
+              >
+                View all {stream.title} dates
+              </Button>
+            ))}
+          </Stack>
         </Stack>
       </Container>
     </Layout>
