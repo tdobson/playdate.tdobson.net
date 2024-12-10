@@ -1,5 +1,11 @@
 import { Stack, Title, Card, Text, Group } from '@mantine/core';
-import { IconClock, IconCalendar } from '@tabler/icons-react';
+import { 
+  IconClock, 
+  IconCalendar, 
+  IconBabyCarriage, 
+  IconCurrencyPound,
+  IconCalendarEvent 
+} from '@tabler/icons-react';
 import type { EventStream, EventDate } from '../../types/events';
 
 interface EventDetailsProps {
@@ -39,13 +45,18 @@ export function EventDetails({ stream, event }: EventDetailsProps) {
         <Text>{stream.details.description}</Text>
         
         <Group>
-          <Text fw={500}>Age Range:</Text>
-          <Text>{stream.details.ageRange}</Text>
+          <IconBabyCarriage size={20} color="gray" />
+          <Text>0-3 years</Text>
         </Group>
         
         <Group>
-          <Text fw={500}>Cost:</Text>
-          <Text>{stream.details.cost}</Text>
+          <IconCurrencyPound size={20} color="gray" />
+          <Text>Free</Text>
+        </Group>
+
+        <Group>
+          <IconCalendarEvent size={20} color="gray" />
+          <Text>No RSVP required</Text>
         </Group>
       </Stack>
     </Card>
