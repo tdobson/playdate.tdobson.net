@@ -37,7 +37,22 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
             <Stack gap="md">
               <Title order={2}>Upcoming Dates</Title>
               {futureEvents.map(event => (
-                <Card key={event.id} withBorder>
+                <Card 
+                  key={event.id} 
+                  withBorder
+                  component={Link}
+                  href={`/events/${stream.id}/${event.id}`}
+                  sx={{
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    '&:hover': {
+                      transform: 'translateX(5px)',
+                      backgroundColor: 'var(--mantine-color-gray-0)',
+                    }
+                  }}
+                >
                   <Group justify="apart">
                     <Stack gap="xs">
                       <Text fw={500}>
@@ -51,9 +66,14 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
                       <Text size="sm">{event.time}</Text>
                     </Stack>
                     <Button
-                      component={Link}
-                      href={`/events/${stream.id}/${event.id}`}
+                      component="div"
                       variant="light"
+                      sx={{
+                        transition: 'transform 0.2s ease',
+                        '&:hover': {
+                          transform: 'scale(1.05)'
+                        }
+                      }}
                     >
                       View Details
                     </Button>
