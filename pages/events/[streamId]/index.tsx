@@ -94,7 +94,7 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
                 <Text>{stream.location.postcode}</Text>
                 
                 <Group>
-                  <IconParking size={20} color="gray" />
+                  <IconCar size={20} color="gray" />
                   <Text size="sm">{stream.location.parking}</Text>
                 </Group>
 
