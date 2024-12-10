@@ -5,7 +5,12 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 export default withBundleAnalyzer({
-  reactStrictMode: false,
+  reactStrictMode: true,
+  output: "export",
+  distDir: "out",
+  images: {
+    unoptimized: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
