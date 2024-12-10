@@ -39,23 +39,6 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
 
           <Card withBorder>
             <Stack gap="md">
-              <Title order={2}>Location</Title>
-              <Text>{stream.location.address}</Text>
-              <Text>{stream.location.postcode}</Text>
-              <Text size="sm">{stream.location.parking}</Text>
-              <Button 
-                component="a" 
-                href={stream.location.mapsUrl}
-                target="_blank"
-                variant="light"
-              >
-                Open in Maps
-              </Button>
-            </Stack>
-          </Card>
-
-          <Card withBorder>
-            <Stack gap="md">
               <Title order={2}>Upcoming Dates</Title>
               {futureEvents.map(event => (
                 <Card key={event.id} withBorder>
@@ -81,6 +64,23 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
                   </Group>
                 </Card>
               ))}
+            </Stack>
+          </Card>
+
+          <Card withBorder>
+            <Stack gap="md">
+              <Title order={2}>Location</Title>
+              <Text>{stream.location.address}</Text>
+              <Text>{stream.location.postcode}</Text>
+              <Text size="sm">{stream.location.parking}</Text>
+              <Button 
+                component="a" 
+                href={stream.location.mapsUrl}
+                target="_blank"
+                variant="light"
+              >
+                Open in Maps
+              </Button>
             </Stack>
           </Card>
 
