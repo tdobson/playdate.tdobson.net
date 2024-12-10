@@ -34,7 +34,7 @@ export default function SchedulePage() {
     <Layout>
       <Container size="md">
         <Stack gap="xl">
-          <Title>Upcoming Play-ins</Title>
+          <Title>Upcoming Playdates</Title>
 
           <Timeline active={-1}>
             {allFutureEvents.map((event) => (
@@ -61,6 +61,7 @@ export default function SchedulePage() {
                   })}
                 </Text>
                 <Text size="sm" c="dimmed">{event.time}</Text>
+                <Text size="sm" c="dimmed">{config.eventStreams.find(s => s.id === event.streamId)?.location.address.split(',')[0]}</Text>
                 <Button
                   component={Link}
                   href={`/events/${event.streamId}/${event.id}`}
