@@ -1,5 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { Container, Stack, Title, Card, Text, Button, Group } from '@mantine/core';
+import React from 'react';
+import { Container, Stack, Title, Card, Text, Button, Group, Accordion } from '@mantine/core';
 import { 
   IconMapPin, 
   IconBus, 
