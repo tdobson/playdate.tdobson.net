@@ -1,5 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { Container, Stack, Title, Card, Text, Button, Group } from '@mantine/core';
+import { EventDetails } from '../../../components/EventDetails/EventDetails';
 import { 
   IconClock, 
   IconCalendar,
@@ -24,29 +25,7 @@ export default function EventPage({ stream, event }: EventPageProps) {
         <Stack gap="xl">
           <Title>{stream.title}</Title>
           
-          <Card withBorder>
-            <Stack gap="md">
-              <Group>
-                <IconCalendar size={24} />
-                <Title order={2}>Event Details</Title>
-              </Group>
-              <Group>
-                <IconCalendar size={20} color="gray" />
-                <Text fw={500}>
-                  {new Date(event.date).toLocaleDateString('en-GB', {
-                    weekday: 'long',
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric'
-                  })}
-                </Text>
-              </Group>
-              <Group>
-                <IconClock size={20} color="gray" />
-                <Text>{event.time}</Text>
-              </Group>
-            </Stack>
-          </Card>
+          <EventDetails stream={stream} event={event} />
 
           <Location location={stream.location} />
 

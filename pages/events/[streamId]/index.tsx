@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import React from 'react';
 import { Container, Stack, Title, Card, Text, Button, Group } from '@mantine/core';
+import { EventDetails } from '../../../components/EventDetails/EventDetails';
 import {
   IconClock,
   IconCalendar,
@@ -30,20 +31,7 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
         <Stack gap="xl">
           <Title>{stream.title}</Title>
 
-          <Card withBorder>
-            <Stack gap="md">
-              <Title order={2}>About</Title>
-              <Text>{stream.details.description}</Text>
-              <Group>
-                <Text fw={500}>Age Range:</Text>
-                <Text>{stream.details.ageRange}</Text>
-              </Group>
-              <Group>
-                <Text fw={500}>Cost:</Text>
-                <Text>{stream.details.cost}</Text>
-              </Group>
-            </Stack>
-          </Card>
+          <EventDetails stream={stream} />
 
           <Card withBorder>
             <Stack gap="md">
