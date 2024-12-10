@@ -36,7 +36,7 @@ export default function SchedulePage() {
         <Stack gap="xl">
           <Title>Upcoming Playdates</Title>
 
-          <Timeline active={-1}>
+          <Timeline active={1} bulletSize={40}>
             {allFutureEvents.map((event) => (
               <Timeline.Item
                 key={event.id}
