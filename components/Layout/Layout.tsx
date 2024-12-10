@@ -52,16 +52,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
             leftSection={<link.icon size="1.2rem" stroke={1.5} style={{ color: link.color }} />}
             active={router.pathname === link.href}
             onClick={() => close()}
-            styles={(theme) => ({
+            styles={{
               root: {
-                '&[data-active]': {
+                '&[data-active=true]': {
                   backgroundColor: `${link.color}19`,
                 },
               },
               label: {
                 fontSize: '1.1rem',
               }
-            })}
+            }}
           />
         ))}
       </AppShell.Navbar>
