@@ -2,16 +2,14 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { Container, Stack, Title, Card, Text, Button, Group } from '@mantine/core';
 import { 
   IconMapPin, 
-  IconParking, 
   IconBus, 
+  IconTrain, 
+  IconCar, 
   IconClock, 
   IconCalendar,
   IconMail,
   IconBrandFacebook,
-  IconBabyCarriage,
-  IconCash,
-  IconExternalLink,
-  IconTrain
+  IconExternalLink
 } from '@tabler/icons-react';
 import { Layout } from '../../../components/Layout/Layout';
 import { FAQ } from '../../../components/FAQ/FAQ';
@@ -61,24 +59,44 @@ export default function EventPage({ stream, event }: EventPageProps) {
                 <Title order={2}>Location</Title>
               </Group>
               
+              {/* Primary Location Info */}
               <Stack gap="xs">
-                <Group>
-                  <IconMapPin size={20} color="gray" />
-                  <Text>{stream.location.address}</Text>
-                </Group>
-                <Text>{stream.location.postcode}</Text>
+                <Text size="lg" fw={500}>
+                  {stream.location.address === "272 Strines Road" ? "Strines" : stream.location.address}
+                </Text>
+                <Text size="sm" c="dimmed">{stream.location.postcode}</Text>
                 
-                <Group>
-                  <IconParking size={20} color="gray" />
-                  <Text size="sm">{stream.location.parking}</Text>
-                </Group>
+                <Button 
+                  component="a" 
+                  href={stream.location.mapsUrl}
+                  target="_blank"
+                  variant="light"
+                  leftSection={<IconMapPin size={20} />}
+                  mt="xs"
+                >
+                  Open in Maps
+                </Button>
+              </Stack>
+
+              {/* Transport Options Accordion */}
+              <Accordion variant="contained" mt="md">
+                <Accordion.Item value="car">
+                  <Accordion.Control icon={<IconCar size={20} />}>
+                    Arriving by Car
+                  </Accordion.Control>
+                  <Accordion.Panel>
+                    <Text size="sm">{stream.location.parking}</Text>
+                  </Accordion.Panel>
+                </Accordion.Item>
 
                 {stream.location.transport?.bus && (
-                    <Group>
-                      <IconBus size={20} color="gray" />
-                      <Stack gap={4}>
-                        <Text>Bus {stream.location.transport.bus.route}</Text>
-                        <Text size="sm" c="dimmed">{stream.location.transport.bus.description}</Text>
+                  <Accordion.Item value="bus">
+                    <Accordion.Control icon={<IconBus size={20} />}>
+                      Bus Route 358
+                    </Accordion.Control>
+                    <Accordion.Panel>
+                      <Stack gap="sm">
+                        <Text size="sm">{stream.location.transport.bus.description}</Text>
                         <Group>
                           <Button 
                             component="a"
@@ -102,43 +120,38 @@ export default function EventPage({ stream, event }: EventPageProps) {
                           </Button>
                         </Group>
                       </Stack>
-                    </Group>
-                  )}
-                {stream.location.transport?.train && (
-                  <Group>
-                    <IconTrain size={20} color="gray" />
-                    <Stack gap={4}>
-                      <Text>{stream.location.transport.train.station} Station</Text>
-                      <Text size="sm" c="dimmed">
-                        {stream.location.transport.train.walkTime} walk
-                      </Text>
-                      <Text size="sm" c="dimmed">
-                        {stream.location.transport.train.connections}
-                      </Text>
-                      <Button 
-                        component="a"
-                        href={stream.location.transport.train.timetableUrl}
-                        target="_blank"
-                        variant="light"
-                        size="xs"
-                        leftSection={<IconExternalLink size={16} />}
-                      >
-                        View Train Times
-                      </Button>
-                    </Stack>
-                  </Group>
+                    </Accordion.Panel>
+                  </Accordion.Item>
                 )}
-              </Stack>
 
-              <Button 
-                component="a" 
-                href={stream.location.mapsUrl}
-                target="_blank"
-                variant="light"
-                leftSection={<IconMapPin size={20} />}
-              >
-                Open in Maps
-              </Button>
+                {stream.location.transport?.train && (
+                  <Accordion.Item value="train">
+                    <Accordion.Control icon={<IconTrain size={20} />}>
+                      Train to Strines
+                    </Accordion.Control>
+                    <Accordion.Panel>
+                      <Stack gap="sm">
+                        <Text size="sm">
+                          {stream.location.transport.train.station} Station is a {stream.location.transport.train.walkTime} walk away.
+                        </Text>
+                        <Text size="sm">
+                          {stream.location.transport.train.connections}
+                        </Text>
+                        <Button 
+                          component="a"
+                          href={stream.location.transport.train.timetableUrl}
+                          target="_blank"
+                          variant="light"
+                          size="xs"
+                          leftSection={<IconExternalLink size={16} />}
+                        >
+                          View Train Times
+                        </Button>
+                      </Stack>
+                    </Accordion.Panel>
+                  </Accordion.Item>
+                )}
+              </Accordion>
             </Stack>
           </Card>
 
