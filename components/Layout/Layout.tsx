@@ -3,23 +3,32 @@ import { useDisclosure } from '@mantine/hooks';
 import { IconCalendar, IconBabyBottle, IconHome } from '@tabler/icons-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import eventsConfig from '../../config/events.json';
 
 const colors = {
-  home: '#228BE6',    // blue
-  schedule: '#40C057', // green
-  dadsPlayin: '#BE4BDB', // grape
-  regularPlayin: '#E64980'  // pink
+  schedule: '#228BE6',    // blue
+  dadsClub: '#BE4BDB',    // grape
+  thursdayPlayin: '#E64980'  // pink
 };
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [opened, { toggle, close }] = useDisclosure();
   const router = useRouter();
 
+  // Create links array dynamically from event streams
   const links = [
-    { icon: IconHome, label: 'Home', href: '/', color: colors.home },
-    { icon: IconCalendar, label: 'Schedule', href: '/schedule', color: colors.schedule },
-    { icon: IconBabyBottle, label: 'Dads Play-in', href: '/dads-playin', color: colors.dadsPlayin },
-    { icon: IconBabyBottle, label: 'Regular Play-in', href: '/regular-playin', color: colors.regularPlayin },
+    { 
+      icon: IconCalendar, 
+      label: 'Schedule', 
+      href: '/', 
+      color: colors.schedule 
+    },
+    ...eventsConfig.eventStreams.map(stream => ({
+      icon: IconBabyBottle,
+      label: stream.title,
+      href: `/events/${stream.id}`,
+      color: stream.id === 'dads-club' ? colors.dadsClub : colors.thursdayPlayin
+    }))
   ];
 
   return (
