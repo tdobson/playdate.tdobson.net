@@ -21,7 +21,8 @@ export function Location({ location, variant = 'full' }: LocationProps) {
 
   if (variant === 'compact') {
     return (
-      <Stack gap="xs">
+      <Card withBorder>
+        <Stack gap="xs">
         <Group>
           <IconMapPin size={20} color="gray" />
           <Text>{formattedAddress}</Text>
@@ -78,7 +79,8 @@ export function Location({ location, variant = 'full' }: LocationProps) {
   }
 
   return (
-    <Stack gap="md">
+    <Card withBorder>
+      <Stack gap="md">
       <Group>
         <IconMapPin size={24} />
         <Title order={2}>Location</Title>
@@ -172,6 +174,7 @@ export function Location({ location, variant = 'full' }: LocationProps) {
           </Accordion.Item>
         )}
       </Accordion>
-    </Stack>
+      </Stack>
+    </Card>
   );
 }

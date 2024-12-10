@@ -48,9 +48,7 @@ export default function EventPage({ stream, event }: EventPageProps) {
             </Stack>
           </Card>
 
-          <Card withBorder>
-            <Location location={stream.location} />
-          </Card>
+          <Location location={stream.location} />
 
           <Card withBorder>
             <Stack gap="md">
