@@ -1,8 +1,8 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import React from 'react';
 import { Container, Stack, Title, Card, Text, Button, Group } from '@mantine/core';
-import { 
-  IconClock, 
+import {
+  IconClock,
   IconCalendar,
   IconMail,
   IconBrandFacebook,
@@ -75,7 +75,7 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
             </Stack>
           </Card>
 
-          <Location location={stream.location} variant="compact" />
+          <Location location={stream.location} />
 
           <Card withBorder>
             <Stack gap="md">
@@ -88,14 +88,14 @@ export default function EventStreamPage({ stream }: EventStreamPageProps) {
             <Stack gap="md">
               <Title order={2}>Contact</Title>
               <Group>
-                <Button 
+                <Button
                   component="a"
                   href={`mailto:${stream.contact.email.join('')}`}
                   variant="light"
                 >
                   Email Us
                 </Button>
-                <Button 
+                <Button
                   component="a"
                   href={stream.contact.facebook}
                   target="_blank"
