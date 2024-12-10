@@ -9,6 +9,15 @@ export interface EventDate {
 	time: string;
 }
 
+export interface Event extends EventDate {
+  type: 'dads' | 'regular';
+  hosts: string[];
+  details: {
+    ageRange: string;
+    cost: string;
+  };
+}
+
 export interface EventStream {
 	id: string;
 	title: string;
