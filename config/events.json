@@ -3,7 +3,7 @@
 		{
 			"id": "thursday-hazelswim",
 			"title": "Thursday HazelSwim",
-			"hosts": ["Tim", "Jen"],
+			"hosts": ["Tim"],
 			"location": {
 				"address": "Life Leisure Hazel Grove, Jacksons Ln",
 				"postcode": "SK7 5JW",
@@ -27,7 +27,7 @@
 			"details": {
 				"ageRange": "Best for under 3s (no strict limit)",
 				"cost": "£5 per adult (free for babies)",
-				"description": "A relaxed swimming session for parents and young children. While lifeguards are present, this is not an organised session or swimming lesson."
+				"description": "A fun swim and splash session for babies and friendly parents. While lifeguards are present, this is not an organised session or swimming lesson."
 			},
 			"dates": [
 				{

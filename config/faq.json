@@ -1,60 +1,40 @@
 {
 	"shared": [
 		{
-			"q": "Do I need to RSVP?",
-			"a": "Nope - just turn up. If you make it yay, if life gets in the way, such is life!"
+			"q": "Do I need to RSVP or book?",
+			"a": "You can book via Life Leisure, but most of us just turn up on the day. It's only over subscribed in school holidays."
 		},
 		{
 			"q": "What if I'm late?",
-			"a": "That's chill. Arrive when you arrive."
+			"a": "That's chill. Arrive when you arrive - just check in with the lifeguards when you get there."
 		},
 		{
 			"q": "Where can we park?",
-			"a": "Park on road by Strines Church - 30 second walk away"
+			"a": "There's free parking in the Life Leisure car park."
 		},
 		{
 			"q": "Does it cost anything?",
-			"a": "Absolutely not."
+			"a": "Yes, it's £5 per adult, and babies are free."
 		},
 		{
 			"q": "What's the age range?",
-			"a": "0-3 years is probably the best age, but if you need to bring older siblings, that's fine - drop us a message"
-		},
-		{
-			"q": "I don't know you very well, can I come?",
-			"a": "Yep - please do. If you're reading this, and your child is in the age range - please do"
-		},
-		{
-			"q": "Can I invite my friend with their kids?",
-			"a": "Probably, but drop us a line first"
+			"a": "Best for under 3s, but there's no strict limit. It's a great session for babies and toddlers."
 		},
 		{
 			"q": "How many people are coming?",
-			"a": "As many as come. If it's many, great, if it's a few - also great."
+			"a": "Maximum 30 people (approx 14 babies), but usually much fewer."
 		},
 		{
 			"q": "What will we do?",
-			"a": "We have some toys, and the kids can play around whilst the adults chat"
-		},
-		{
-			"q": "What about outdoor play?",
-			"a": "If the weather's nice, we have a slide and baby swing! The ground is quite boggy though, so full outdoor suits and outdoor shoes or wellies are recommended. We also have an indoor trampoline and plenty of room indoors."
+			"a": "It's a fun swim and splash session for babies and friendly parents. The pool is 1m deep with floats provided."
 		},
 		{
 			"q": "Shall I bring food?",
-			"a": "We'll do some snacky finger food like toast for the youth, but if there's snacks you think you or other adults would enjoy, please feel free to bring it along. Please only bring things you'd be willing to take home."
-		},
-		{
-			"q": "Can we bring this specific toy or toys?",
-			"a": "err, sure? We have plenty, and anything you bring has a risk of getting lost - but if you think it'd be awesome, or work well for your child - please do!"
+			"a": "It's sometimes nice to share food in the cafe area afterwards if people want to stay and chat."
 		},
 		{
 			"q": "Why do you have such a slick website?",
 			"a": "Because \"we\" is often \"I\" and I, Tim am often bored and am a professional web developer - www.tdobson.net - so I built this \"for fun\"."
-		},
-		{
-			"q": "I can't make this one, will you do it again?",
-			"a": "Hopefully!"
 		}
 	]
 }
