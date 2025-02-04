@@ -50,6 +50,7 @@ export interface EventStream {
 		ageRange: string;
 		cost: string;
 		description: string;
+		rsvp: string;
 	};
 	dates: EventDate[];
 	faq: Question[];
