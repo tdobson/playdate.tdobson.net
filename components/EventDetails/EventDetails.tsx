@@ -55,12 +55,12 @@ export function EventDetails({ stream, event }: EventDetailsProps) {
         
         <Group>
           <IconCurrencyPound size={20} color="gray" />
-          <Text>Free</Text>
+          <Text>{stream.details.cost}</Text>
         </Group>
 
         <Group>
           <IconCalendarEvent size={20} color="gray" />
-          <Text>No RSVP required</Text>
+          <Text>{stream.details.rsvp}</Text>
         </Group>
 
         <Text>{stream.details.description}</Text>
