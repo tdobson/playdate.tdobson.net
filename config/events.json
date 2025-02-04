@@ -10,18 +10,13 @@
 				"parking": "Free parking in the car park",
 				"mapsUrl": "https://maps.apple.com/?address=Life Leisure Hazel Grove, Jacksons Ln, Hazel Grove, Stockport SK7 5JW",
 				"transport": {
-					"bus": [
-						{
-							"route": "192",
-							"description": "The 192 bus connects Hazel Grove to Stockport and Manchester, stopping a 10 minute walk away",
-							"timetableUrl": "https://bustimes.org/services/192-manchester-hazel-grove-3",
-							"liveTimesUrl": "https://tfgm.com/travel-updates/live-departures/bus/1800SG40141?serviceName=192"
-						},
-						{
-							"route": "394",
-							"description": "The 394 bus connects Glossop to Stepping Hill Hospital, with a 10 minute walk from the hospital to the pool"
-						}
-					],
+					"bus": {
+						"route": "394",
+						"description": "Connects Glossop to Stepping Hill Hospital",
+						"walkTime": "10 minutes",
+						"timetableUrl": "https://bustimes.org/services/394-glossop-marple-stepping-hill-hospital",
+						"liveTimesUrl": "https://tfgm.com/travel-updates/live-departures/bus/394-stepping-hill"
+					},
 					"train": {
 						"station": "Hazel Grove",
 						"code": "HAZ",
