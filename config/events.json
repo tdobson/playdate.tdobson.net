@@ -71,6 +71,10 @@
 				{
 					"q": "What time should we arrive?",
 					"a": "It's recommended to arrive at 14:30 to start getting changed for the 14:45 session."
+				},
+				{
+					"q": "Is this affiliated with Life Leisure?",
+					"a": "No, this is not endorsed, affiliated or supported in any way by Life Leisure. It's an entirely informal gathering organised by parents."
 				}
 			]
 		}
