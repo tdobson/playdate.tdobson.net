@@ -89,7 +89,7 @@ export function Location({ location }: LocationProps) {
         {location.transport?.train && (
           <Accordion.Item value="train">
             <Accordion.Control icon={<IconTrain size={20} />}>
-              Train to Strines
+              Train to {location.transport.train.station}
             </Accordion.Control>
             <Accordion.Panel>
               <Stack gap="sm">

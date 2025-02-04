@@ -5,7 +5,7 @@
 			"title": "Thursday HazelSwim",
 			"hosts": ["Tim"],
 			"location": {
-				"address": "Life Leisure Hazel Grove, Jacksons Ln, SK7 5JW",
+				"address": "The Small Pool, Life Leisure Hazel Grove, SK7 5JW",
 				"postcode": "SK7 5JW",
 				"parking": "Free parking in the car park",
 				"mapsUrl": "https://maps.apple.com/?address=Life Leisure Hazel Grove, Jacksons Ln, Hazel Grove, Stockport SK7 5JW",
@@ -69,7 +69,7 @@
 				},
 				{
 					"q": "What are the changing facilities like?",
-					"a": "There are good changing facilities available."
+					"a": "Baby change facilities available in the small pool changing rooms. There's dedicated space for buggies too."
 				},
 				{
 					"q": "How deep is the pool?",
@@ -81,11 +81,15 @@
 				},
 				{
 					"q": "What's the pool temperature?",
-					"a": "The pool is maintained at 29°C which is standard for public pools. Still, keep an eye on your little one's comfort - some babies prefer slightly warmer water and may need extra cuddles afterwards!"
+					"a": "The small pool is maintained at 29°C (standard temperature) - much warmer than the main pool. Still, watch your little one's comfort as some prefer it warmer."
 				},
 				{
 					"q": "Is this affiliated with Life Leisure?",
 					"a": "No, this is not endorsed, affiliated or supported in any way by Life Leisure. It's an entirely informal gathering organised by parents."
+				},
+				{
+					"q": "What do I need for the lockers?",
+					"a": "Padlocks are required but can be bought at reception (£3). Many leave lockers unlocked without issues, but we recommend securing valuables."
 				}
 			]
 		}
