@@ -1,26 +1,22 @@
 {
 	"eventStreams": [
 		{
-			"id": "dads-club",
-			"title": "Dad's Club Playdate",
-			"hosts": ["Tim", "Jen", "James"],
+			"id": "thursday-hazelswim",
+			"title": "Thursday HazelSwim",
+			"hosts": ["Tim", "Jen"],
 			"location": {
-				"address": "272 Strines Road",
-				"postcode": "SK6 7GB",
-				"parking": "Park on road by Strines Church - 30 second walk away",
-				"mapsUrl": "https://maps.apple.com/?address=272 Strines Road, Sk6 7GB",
+				"address": "Life Leisure Hazel Grove, Jacksons Ln",
+				"postcode": "SK7 5JW",
+				"parking": "Free parking in the car park",
+				"mapsUrl": "https://maps.apple.com/?address=Life Leisure Hazel Grove, Jacksons Ln, Hazel Grove, Stockport SK7 5JW",
 				"transport": {
 					"bus": {
-						"route": "358",
-						"description": "The 358 bus (Stockport - Offerton - Marple - New Mills - Hayfield) stops within 30 seconds of our door",
-						"timetableUrl": "https://assets.ctfassets.net/nv7y93idf4jq/3z3BDfIqiVMotc7XpaKYxr/236cdf5367d61d046efb9d889f262a9c/358__360_Stockport_24-SC-0114.pdf",
-						"liveTimesUrl": "https://tfgm.com/travel-updates/live-departures/bus/358-stockport"
+						"route": "Stepping Hill Hospital routes",
+						"description": "Bus routes to Stepping Hill Hospital stop a short walk away"
 					},
 					"train": {
-						"station": "Strines",
-						"walkTime": "15 minutes",
-						"connections": "Direct trains to/from Romily, Marple, and New Mills Central",
-						"timetableUrl": "https://www.northernrailway.co.uk/stations/STR"
+						"station": "Hazel Grove",
+						"walkTime": "5 minutes"
 					}
 				}
 			},
@@ -29,90 +25,52 @@
 				"facebook": "https://m.me/tdobson"
 			},
 			"details": {
-				"ageRange": "0-3",
-				"cost": "Free Event",
-				"description": "A welcoming playdate for dads, grandads, and male carers. Looking after kids can be a lonely job, so come meet other guys in the same situation, have a brew, and let the little ones play!"
+				"ageRange": "Best for under 3s (no strict limit)",
+				"cost": "£5 per adult (free for babies)",
+				"description": "A relaxed swimming session for parents and young children. While lifeguards are present, this is not an organised session or swimming lesson."
 			},
 			"dates": [
 				{
-					"id": "dads-dec-14",
-					"date": "2024-12-14",
-					"time": "09:30-12:00"
+					"id": "hazelswim-feb-06",
+					"date": "2025-02-06",
+					"time": "14:45-15:45"
 				},
 				{
-					"id": "dads-dec-21",
-					"date": "2024-12-21",
-					"time": "09:30-12:00"
+					"id": "hazelswim-feb-13",
+					"date": "2025-02-13",
+					"time": "14:45-15:45"
+				},
+				{
+					"id": "hazelswim-feb-20",
+					"date": "2025-02-20",
+					"time": "14:45-15:45"
+				},
+				{
+					"id": "hazelswim-feb-27",
+					"date": "2025-02-27",
+					"time": "14:45-15:45"
 				}
 			],
 			"faq": [
 				{
-					"q": "Why are you doing this?",
-					"a": "Since Just 4 Dads @ St Chads is on holiday this week - we thought we'd host a low key event at our house."
+					"q": "Is this an organised swimming session?",
+					"a": "No, this is a relaxed swimming session watched over by lifeguards. We're not swimming teachers."
 				},
 				{
-					"q": "Can I bring my partner?",
-					"a": "This event is specifically for dads, grandads, uncles and male carers with their children to promote male-child bonding time."
+					"q": "Do we need armbands?",
+					"a": "Armbands aren't required but are recommended for young children."
 				},
 				{
-					"q": "Will there be women organisers present?",
-					"a": "Yes, Jen will be helping host the event with Tim and James."
-				}
-			]
-		},
-		{
-			"id": "thursday-playin",
-			"title": "Thursday Playdate",
-			"hosts": ["Tim", "James"],
-			"location": {
-				"address": "272 Strines Road",
-				"postcode": "SK6 7GB",
-				"parking": "Park on road by Strines Church - 30 second walk away",
-				"mapsUrl": "https://maps.apple.com/?address=272 Strines Road, Sk6 7GB",
-				"transport": {
-					"bus": {
-						"route": "358",
-						"description": "The 358 bus (Stockport - Offerton - Marple - New Mills - Hayfield) stops within 30 seconds of our door",
-						"timetableUrl": "https://assets.ctfassets.net/nv7y93idf4jq/3z3BDfIqiVMotc7XpaKYxr/236cdf5367d61d046efb9d889f262a9c/358__360_Stockport_24-SC-0114.pdf",
-						"liveTimesUrl": "https://tfgm.com/travel-updates/live-departures/bus/358-stockport"
-					},
-					"train": {
-						"station": "Strines",
-						"walkTime": "15 minutes",
-						"connections": "Direct trains to/from Romily, Marple, and New Mills Central",
-						"timetableUrl": "https://www.northernrailway.co.uk/stations/STR"
-					}
-				}
-			},
-			"contact": {
-				"email": ["timandjen", "@", "tdobson.net"],
-				"facebook": "https://m.me/tdobson"
-			},
-			"details": {
-				"ageRange": "0-3",
-				"cost": "Free Event",
-				"description": "We're hosting a baby and toddler playdate at our house, and you're invited! All welcome - mums, dads, grandparents, aunts, uncles - anyone caring for little ones!"
-			},
-			"dates": [
-				{
-					"id": "thursday-dec-19",
-					"date": "2024-12-19",
-					"time": "09:30-11:00"
+					"q": "What are the changing facilities like?",
+					"a": "There are good changing facilities available."
 				},
 				{
-					"id": "thursday-jan-02",
-					"date": "2025-01-02",
-					"time": "09:30-11:00"
-				}
-			],
-			"faq": [
-				{
-					"q": "Why are you doing this?",
-					"a": "We usually go to a playgroup at Inside Out in New Mills, but it's on holiday. We're keen to welcome everyone round for some festive playing at our house."
+					"q": "How deep is the pool?",
+					"a": "The pool is 1m deep and pool floats are provided."
 				},
 				{
-					"q": "Can I bring siblings?",
-					"a": "Yes, siblings are welcome! Our space and activities are best suited for ages 0-3, but we understand if you need to bring older children."
+					"q": "What time should we arrive?",
+					"a": "It's recommended to arrive at 14:30 to start getting changed for the 14:45 session."
 				}
 			]
 		}
