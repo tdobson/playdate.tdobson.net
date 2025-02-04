@@ -16,6 +16,7 @@
 					},
 					"train": {
 						"station": "Hazel Grove",
+						"code": "HAZ",
 						"walkTime": "5 minutes"
 					}
 				}
@@ -27,6 +28,7 @@
 			"details": {
 				"ageRange": "Best for under 3s (no strict limit)",
 				"cost": "£5 per adult (free for babies)",
+				"rsvp": "Booking optional",
 				"description": "A fun swim and splash session for babies and friendly parents. While lifeguards are present, this is not an organised session or swimming lesson."
 			},
 			"dates": [
