@@ -80,6 +80,10 @@
 					"a": "It's recommended to arrive at 14:30 to start getting changed for the 14:45 session."
 				},
 				{
+					"q": "What's the pool temperature?",
+					"a": "The pool is maintained at 29°C which is standard for public pools. Still, keep an eye on your little one's comfort - some babies prefer slightly warmer water and may need extra cuddles afterwards!"
+				},
+				{
 					"q": "Is this affiliated with Life Leisure?",
 					"a": "No, this is not endorsed, affiliated or supported in any way by Life Leisure. It's an entirely informal gathering organised by parents."
 				}
